@@ -1,0 +1,110 @@
+body{
+    background-color: #2a2a2a;
+}
+
+.class1 {
+    font-size:15px;
+}
+
+.NombreClass {
+    display:flex;
+    margin-bottom:-50px;
+    justify-content:center
+}
+
+.className{
+    margin-top:50px;
+
+    margin-left:10px;
+
+}
+
+.classh1 {
+    margin-top:22px;
+    margin-left:20px;
+    margin-bottom:0px;
+}
+
+/* .nameImageSummary{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+
+} */
+.summaryStyle{
+    width:850px;
+    margin-left:50px;
+    padding-right:50px;
+    border-right: 1px solid #000;
+    text-align:justify;
+    /* border-left: 4px dashed blue; */
+}
+
+.stepsStyle{
+    margin-left:50px;
+    width:650px;
+    margin-top:50px;
+    text-align:justify;
+}
+
+/* div { border-left: 4px dashed blue;
+    background-color: gold;
+    height: 100px;
+    width: 100px;
+    font-weight: bold; } */
+.healthDiets{
+    margin-top:300px;
+    display:flex;
+    flex-direction:column;
+}
+
+.healthDietSsteps {
+    width:750px;
+    display:flex;
+    flex-direction:column;
+
+}
+
+.imagenyResumen{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+.detailClass{
+    background-color: #AA6C39;   
+margin-top:50px;
+margin-left:100px;
+    width: 1700px;
+    height:1300px;
+    padding:0px;
+border:1px solid #ccc;  
+box-shadow: 2px 2px 2px 2px #ccc;
+font-size:20px;
+display:flex;
+}
+
+.imagedetail {
+    width:900px;
+    margin-bottom:40px;
+    margin-top:50px;
+    margin-left:50px;
+}
+
+.boton{
+    padding:0px;
+    width:500px;
+    margin-left:-115px;
+    margin-top:20px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #AA6C39;    
+    display:inline-block;
+    padding: 0; 
+    border:1px solid #ccc;  
+    text-align: center;
+   }
+  
+   .boton:hover{
+    background-color: #AA3939;    
+   
+  }   

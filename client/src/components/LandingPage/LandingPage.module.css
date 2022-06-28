@@ -1,0 +1,40 @@
+.principal{
+    margin:0px;
+    background-image: url(./20.jpg); 
+    background-repeat:no-repeat;
+    background-position: center center;
+    height: 1150px;
+    background-size: cover; 
+}
+
+
+
+.boton{
+    margin-top: 657px;
+    margin-left:-1200px;
+    width: 165px;
+    height: 65px;
+    cursor: pointer;
+    background-color: #ffac46;    
+    position:relative;
+    display:inline-block;
+    padding:0px;
+    border-color: #2a2a2a;
+  border-radius: 15px;
+font-family:ericma;
+  color: #2a2a2a;
+  font-size: 27px;
+  text-decoration: none;
+  font-weight: bold;
+  border-style: solid;
+   }
+
+.boton:hover{
+   background-color: #AA3939;    
+    
+}   
+
+
+
+
+   

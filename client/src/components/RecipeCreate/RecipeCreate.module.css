@@ -1,0 +1,285 @@
+body{
+    background-color:#2a2a2a;
+    text-align:justify; 
+    display:block;
+}
+
+.formulario
+ {
+    display:flex;
+    flex-direction:column;
+    margin-left:400px;
+    margin-right:400px; 
+    background-color:#eeeeee;
+    margin-bottom:500px;
+}
+
+.botonVolver{
+    padding:0px;
+    margin-left:0px;
+    margin-bottom:0px;
+    width: 165px;
+    height: 65px;
+    cursor: pointer;
+    background-color: #aaa8a8 ;   
+    border-color: #2a2a2a;
+    border-radius: 15px;
+    display:inline-block;
+    font-size: 27px;
+    color: #2a2a2a;
+    border:1px solid #ccc;  
+    text-align: center;
+    
+   }
+  
+   .botonVolver:hover{
+    background-color: #ffac46;   
+   
+  }   
+
+
+.favorito
+{
+    width:608px;
+    color:#57585a;
+    margin-bottom:10px;
+    margin-top:5px;  
+}
+
+
+.submit
+{
+    margin-top:20px;
+    width: 610px;
+    background-color:#eeeeee;
+}
+
+.estiloError{
+    margin-bottom:-25px;
+    margin-top:0px;
+    padding:0px;
+    color:red;
+}
+
+
+.estiloInput{
+    width:900px;
+    margin:0px;
+    height:35px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:20px;
+    color: #2a2a2a;
+
+}
+
+.estiloDiv {
+
+    display:flex;
+    flex-direction:column;
+    font-size:20px;
+
+}
+
+.estiloInputStep {
+    display:flex;
+    flex-direction:column;
+    font-size:20px;
+    height:100px;
+    width:800px;
+    height:35px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:20px;
+    color: #2a2a2a;
+}
+
+.estiloDivUltimo {
+
+    display:flex;
+    flex-direction:column;
+    font-size:20px;
+    height: 300px;
+    margin-top:10px;
+
+}
+
+.estiloLabel {
+
+    display:flex;
+    margin-left:105px;
+    margin-top:30px;
+    margin-bottom:10px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:25px;
+    color: #2a2a2a;
+
+
+}
+
+
+.typeCard{
+    margin-top:30px;
+    margin-bottom:0px;
+    margin-left:100px;
+    font-size:20px; 
+    display:flex;
+    width:100px;
+}
+
+.boton:hover{
+    background-color: #AA3939;    
+   
+  }   
+
+.buttonSubmit{
+    margin-top:50px;
+    margin-bottom:50px;
+    width: 200px;
+    height: 65px;
+    cursor: pointer;
+    background-color: #aaa8a8 ;
+    border-color: #2a2a2a;
+    border-radius: 15px;
+    color: #2a2a2a;
+    font-size: 27px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+    border-style: solid;
+}
+
+   .buttonSubmit:hover{
+    background-color: #ffac46;  
+  
+   
+  }  
+
+.buttonSubmitDisabled{
+    margin-top:50px;
+    margin-bottom:50px;
+    width: 200px;
+    height: 65px;
+    border-color: #2a2a2a;
+    border-radius: 15px;    
+    font-size: 27px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+    border-style: solid;
+
+
+   }
+  
+
+
+
+
+
+
+
+.estiloDivdiets {
+
+    display:flex;
+    width:900px;
+    margin-top:-300px;
+    margin-bottom:0px;
+    margin-left:400px;
+
+}
+
+
+
+.TiposSeleccionadosEstilo {
+    margin-top:50px;
+     margin-left:100px;
+
+  }
+  
+  .botonCierreTipo {
+    cursor: pointer;
+  }
+
+ul{
+    list-style: none;
+  }
+
+.DivBoton {
+    width:150px;
+    margin-top:100px;
+    margin-left:100px;
+}
+
+.divTitulo{
+    width:400px;
+    margin-top:-150px;
+    color: #f1f2f7;
+    margin-left:700px;
+}
+
+.Contenedor{
+    display:block;
+}
+
+
+.contenedorDiets{
+    display:flex;
+    justify-content:space-around;
+    margin-left:100px;
+    margin-right:300px;
+}
+.primeras4Diets{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+
+}
+
+
+
+.segundas4Diets{
+    display:flex;
+    flex-direction:column;
+}
+
+.ultimas3Diets{
+    display:flex;
+    flex-direction:column;
+}
+
+label{   
+        display:flex;
+}
+.labelTypeDiet{
+     margin-top:10px;
+     text-decoration: none;
+     font-weight: bold;
+     font-size:20px;
+     color: #2a2a2a;
+}
+
+
+.estiloLabelTipos{
+    margin-top:30px;
+    margin-left:105px;
+    margin-bottom:30px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:25px;
+}
+
+
+input {
+    background: #f1f2f7;
+    border: 1px solid #393939;
+    border-radius: 5px 5px 5px 5px;
+    color: #2a2a2a;
+    font-size: 12px;
+    padding: 5px;
+ }
+

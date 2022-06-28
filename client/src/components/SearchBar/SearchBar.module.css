@@ -1,0 +1,60 @@
+body{
+    background-color:rgb(194, 187, 95);
+}
+
+.divBuscar{
+    display:flex;
+    flex-direction:column;
+    width:400px;
+    margin-right:0px;
+    margin-left:0px;
+    padding-top:10px;
+
+}
+
+
+
+.buscarClase{
+    width:250px;
+    height: 42px;
+    margin-top:20px;
+    border:2px solid rgba(0,0,0,0.2);
+border-radius: 12px;
+font-family:ericma;
+text-decoration: none;
+font-weight: bold;
+border-style: solid;
+font-size: 1em;
+color: #2a2a2a;
+background-color:#aaa8a8;
+
+}
+
+.botonBuscar{
+    padding:0px;
+    margin-top: 20px;
+    margin-left:0px;
+    width: 258px;
+    height: 50px;
+  cursor: pointer;
+  background-color: #aaa8a8;     
+  position:relative;
+  display:inline-block;
+  padding:0px;
+  border-color: #2a2a2a;
+  border-radius: 15px;
+  font-family:ericma;
+  color: #2a2a2a;
+  font-size: 27px;
+  text-decoration: none;
+  font-weight: bold;
+  border-style: solid;
+   }
+  
+   .botonBuscar:hover{
+    background-color: #ffac46;   
+   }
+
+.labelBuscarRecetas{
+    margin-left:70px;
+  }

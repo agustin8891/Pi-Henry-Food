@@ -1,0 +1,265 @@
+body{
+    background-color: #2a2a2a;
+}
+
+.padreTop{
+  display:flex;
+  font-family:ericma;  
+  font-weight: bold;
+  font-size: 27px;
+  color: #aaa8a8; 
+}
+
+.LinkClase{
+ padding-top:30px;
+  width:300px;
+  margin:5px;
+  margin-top:10px;
+  display:block;
+  color:#ffac46; 
+  font-weight: italic;
+  font-size: 40px;
+}
+
+
+
+
+.filtrosyPaginado {
+  font-size:5px;
+  width:1200px;
+  margin-top:20px;
+  height:250px;
+}
+
+a{
+   font-size:30px;
+  cursor: pointer;
+}
+
+nav{
+  height:50px;
+}
+
+
+li{
+  border-radius: 2px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: darkgrey;
+  color: #2a2a2a;
+  margin: 4px;
+  background-color:#aaa8a8
+}
+
+.padreDeFiltros {
+  font-size:50px;
+  width:1200px;
+  display:flex;
+  justify-content: space-around;
+  
+}
+
+
+.HealthClass{
+  margin:2px;
+  font-size:18px;
+  padding-top:20px;
+  display:flex;
+  flex-direction:column;
+  
+}
+
+
+.abcClase {
+  justify-content: space-between;
+  font-size:18px;
+  padding-top:20px;
+  display:flex;
+  flex-direction:column;
+}
+
+.tipoClase { 
+  font-size:18px;
+  padding-top:20px;
+  display:flex;
+  flex-direction:column;
+  }
+
+.creadosClase{
+  margin:2px;
+  font-size:18px;
+  padding-top:20px;
+    display:flex;
+  flex-direction:column;
+
+}
+
+
+.LabelPagina{
+  font-size:20px !important;
+  margin-top:25px;
+}
+
+.paginadoClase{
+  font-size:18px;
+  margin:0px;
+  height:80px;
+  display:flex;
+  justify-content:center;
+  margin-top:50px;
+  margin-left:-200px;
+}
+
+.paginasClase{
+  margin-top:0px;
+  padding:0px;
+
+}
+
+
+.searchBarClase{
+  font-size:5px;
+}
+
+.padreDeCards{
+
+    gap:20px;
+   display:flex;
+   width: 2000px;
+   margin-left: -90px;
+   margin-top:0px;
+   flex-wrap: wrap;
+   justify-content: center;
+       text-decoration: none;
+       background-color: #2a2a2a;
+}
+
+
+.boton{
+  padding:0px;
+  margin:center;
+  width: 200px;
+  height: 65px;
+  cursor: pointer;
+  background-color: #aaa8a8 ;
+  position:relative;
+  display:inline-block;
+  padding-top:0px;
+  border-color: #2a2a2a;
+  border-radius: 15px;
+  color: #2a2a2a;
+  font-size: 27px;
+  font-family:ericma;
+  text-decoration: none;
+  font-weight: bold;
+  border-style: solid;
+  margin-top:-5px;
+ }
+
+ .boton:hover{
+  background-color: #ffac46;  
+
+ 
+}   
+
+
+
+.padreDeCards > fragment {
+    width: 500px;
+    height:700px;
+    text-align: center;
+    margin-left:90px;
+    margin-top:45px;   
+
+    background-color:#aaa8a8  ;
+}
+
+.padreDeCards > fragment:hover { 
+    background-color:#ffac46 ;
+    color:#2a2a2a;
+} 
+
+
+fragment{
+    background-color:#aaa8a8;
+}
+
+.HealthClass select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+
+.HealthClass select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.HealthClass select::-ms-expand {
+  display: none;
+}
+
+
+.HealthClass{
+	max-width: 250px;
+	position: relative;
+}
+ 
+.HealthClass select{
+	display: inline-block;
+	width: 200px;
+	cursor: pointer;
+  	padding: 7px 10px;
+  	height: 42px;
+  	outline: 0; 
+  	border: 0;
+	border-radius: 0;
+  background-color: #aaa8a8;
+	color: #7b7b7b;
+	font-size: 1em;
+	color: #2a2a2a;
+
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+    border-style: solid;
+}
+
+
+
+
+option{
+  font-family:ericma;
+  text-decoration: none;
+  font-weight: bold;
+  border-style: solid;
+}
+ 
+
+.HealthClass i{
+	position: absolute;
+	right: 20px;
+	top: calc(50% + 5px);
+	width: 16px;
+	height: 16px;
+	display: block;
+	border-left:4px solid #2a2a2a;
+	border-bottom:4px solid #2a2a2a;
+	transform: rotate(-45deg); 
+	transition: all 0.25s ease;
+}
+ 
+.HealthClass:hover i{
+	margin-top: 3px;
+
+}
+
+
+
