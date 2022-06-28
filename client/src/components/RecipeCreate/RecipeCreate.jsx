@@ -6,8 +6,8 @@ import styles from './RecipeCreate.module.css'
 
 /////////////////////////////////////////////////////////////////////////7
 var dietasUnicas=[]
-/* /^[a-zA-Z\s][4-100]*$/ */
-/* /^[a-zA-Z\s][4-100]*$/ */
+
+
  function validate(input) {
     let errors = {}; 
      if (!input.name) {
@@ -17,17 +17,13 @@ var dietasUnicas=[]
       "Solo se aceptan letras del abecedario" ;
     } else if (!input.image) {
       errors.image =  "Este campo es requerido";
-    } /*else if (
-      !/^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/.test(
-        input.image
-      )
+    } else if (
+      !/^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/.test(input.image)
     ) {
       errors.image = "La imagen debe ser una url disponible"; 
-    }*/  else if (!input.summary) {
+    }  else if (!input.summary) {
       errors.summary =  "Este campo es requerido";
-    }/* else if (!/^[a-zA-Z\s]*$/.test(input.summary)) {
-      errors.summary = "No se aceptan caracteres numéricos";
-    } */ else if (!input.healthScore) {
+    } else if (!input.healthScore) {
       errors.healthScore =  "Este campo es requerido";
     }  else if (!/^[0-9_-]{1,3}$/.test(input.healthScore) || input.healthScore < 1) {
       errors.healthScore = "El número debe ser mayor que 0 y menor que 1000";
