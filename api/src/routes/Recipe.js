@@ -9,7 +9,10 @@ const {API_PASSWORD} = process.env;
 
 
 //////////////////////////////////////////////////////////////////////////////
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Solo se puede hacer 150 peticiones por día a la api de este proyecto por lo que se comenta el código 
+// relacionado con la api y se crea un archivo llamado dataApiFood con los datos de las
+//  100 primeras recetas de la api para traer los datos desde este archivo
 //////ARCHIVO
 
 const getApiInfo = async() => {  
