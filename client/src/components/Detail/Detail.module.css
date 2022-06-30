@@ -3,25 +3,25 @@ body{
 }
 
 .class1 {
-    font-size:15px;
+    font-size:10px;
 }
 
 .NombreClass {
     display:flex;
-    margin-bottom:-50px;
+    margin-bottom:-33px;
     justify-content:center
 }
 
 .className{
-    margin-top:50px;
+    margin-top:33px;
 
-    margin-left:10px;
+    margin-left:7px;
 
 }
 
 .classh1 {
-    margin-top:22px;
-    margin-left:20px;
+    margin-top:15px;
+    margin-left:13px;
     margin-bottom:0px;
 }
 
@@ -32,18 +32,18 @@ body{
 
 } */
 .summaryStyle{
-    width:850px;
-    margin-left:50px;
-    padding-right:50px;
+    width:570px;
+    margin-left:33px;
+    padding-right:33px;
     border-right: 1px solid #000;
     text-align: left;
     /* border-left: 4px dashed blue; */
 }
 
 .stepsStyle{
-    margin-left:50px;
-    width:650px;
-    margin-top:50px;
+    margin-left:33px;
+    width:435px;
+    margin-top:33px;
     text-align: left;
 }
 
@@ -53,13 +53,13 @@ body{
     width: 100px;
     font-weight: bold; } */
 .healthDiets{
-    margin-top:300px;
+    margin-top:201px;
     display:flex;
     flex-direction:column;
 }
 
 .healthDietSsteps {
-    width:750px;
+    width:502px;
     display:flex;
     flex-direction:column;
 
@@ -72,29 +72,29 @@ body{
 }
 .detailClass{
     background-color: #aaa8a8 ;
-margin-top:50px;
-margin-left:100px;
-    width: 1700px;
-    height:1300px;
+margin-top:33px;
+margin-left:67px;
+    width: 1139px;
+    height:871px;
     padding:0px;
 border:1px solid #ccc;  
 box-shadow: 2px 2px 2px 2px #ccc;
-font-size:20px;
+font-size:13px;
 display:flex;
 }
 
 .imagedetail {
-    width:900px;
-    margin-bottom:40px;
-    margin-top:50px;
-    margin-left:50px;
+    width:603px;
+    margin-bottom:27px;
+    margin-top:33px;
+    margin-left:33px;
 }
 
 .botonDetail{
     padding:0px;
     margin:center;
-    width: 800px;
-    height: 65px;
+    width: 536px;
+    height: 43px;
     cursor: pointer;
     background-color: #aaa8a8 ;
     position:relative;
@@ -103,12 +103,12 @@ display:flex;
     border-color: #2a2a2a;
     border-radius: 15px;
     color: #2a2a2a;
-    font-size: 27px;
+    font-size: 18px;
     font-family:ericma;
     text-decoration: none;
     font-weight: bold;
     border-style: solid;
-    margin-top:30px;
+    margin-top:20px;
    }
   
    .botonDetail:hover{

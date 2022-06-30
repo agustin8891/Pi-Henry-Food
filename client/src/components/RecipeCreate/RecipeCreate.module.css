@@ -8,24 +8,24 @@ body{
  {
     display:flex;
     flex-direction:column;
-    margin-left:400px;
-    margin-right:400px; 
+    margin-left:268px;
+    margin-right:268px; 
     background-color:#eeeeee;
-    margin-bottom:500px;
+    margin-bottom:335px;
 }
 
 .botonVolver{
     padding:0px;
     margin-left:0px;
     margin-bottom:0px;
-    width: 165px;
-    height: 65px;
+    width: 110px;
+    height: 43px;
     cursor: pointer;
     background-color: #aaa8a8 ;   
     border-color: #2a2a2a;
     border-radius: 15px;
     display:inline-block;
-    font-size: 27px;
+    font-size: 18px;
     color: #2a2a2a;
     border:1px solid #ccc;  
     text-align: center;
@@ -40,22 +40,22 @@ body{
 
 .favorito
 {
-    width:608px;
+    width:407px;
     color:#57585a;
-    margin-bottom:10px;
-    margin-top:5px;  
+    margin-bottom:7px;
+    margin-top:3px;  
 }
 
 
 .submit
 {
-    margin-top:20px;
-    width: 610px;
+    margin-top:13px;
+    width: 408px;
     background-color:#eeeeee;
 }
 
 .estiloError{
-    margin-bottom:-25px;
+    margin-bottom:-16px;
     margin-top:0px;
     padding:0px;
     color:red;
@@ -63,13 +63,13 @@ body{
 
 
 .estiloInput{
-    width:900px;
+    width:603px;
     margin:0px;
-    height:35px;
+    height:23px;
     font-family:ericma;
     text-decoration: none;
     font-weight: bold;
-    font-size:20px;
+    font-size:13px;
     color: #2a2a2a;
 
 }
@@ -78,21 +78,21 @@ body{
 
     display:flex;
     flex-direction:column;
-    font-size:20px;
+    font-size:13px;
 
 }
 
 .estiloInputStep {
     display:flex;
     flex-direction:column;
-    font-size:20px;
-    height:100px;
-    width:800px;
-    height:35px;
+    font-size:13px;
+    height:67px;
+    width:536px;
+    height:23px;
     font-family:ericma;
     text-decoration: none;
     font-weight: bold;
-    font-size:20px;
+    font-size:13px;
     color: #2a2a2a;
 }
 
@@ -100,22 +100,22 @@ body{
 
     display:flex;
     flex-direction:column;
-    font-size:20px;
-    height: 300px;
-    margin-top:10px;
+    font-size:13px;
+    height: 201px;
+    margin-top:7px;
 
 }
 
 .estiloLabel {
 
     display:flex;
-    margin-left:105px;
-    margin-top:30px;
-    margin-bottom:10px;
+    margin-left:70px;
+    margin-top:20px;
+    margin-bottom:7px;
     font-family:ericma;
     text-decoration: none;
     font-weight: bold;
-    font-size:25px;
+    font-size:16px;
     color: #2a2a2a;
 
 
@@ -123,12 +123,12 @@ body{
 
 
 .typeCard{
-    margin-top:30px;
+    margin-top:20px;
     margin-bottom:0px;
-    margin-left:100px;
-    font-size:20px; 
+    margin-left:67px;
+    font-size:13px; 
     display:flex;
-    width:100px;
+    width:67px;
 }
 
 .boton:hover{
@@ -137,16 +137,16 @@ body{
   }   
 
 .buttonSubmit{
-    margin-top:50px;
-    margin-bottom:50px;
-    width: 200px;
-    height: 65px;
+    margin-top:33px;
+    margin-bottom:33px;
+    width: 134px;
+    height: 43px;
     cursor: pointer;
     background-color: #aaa8a8 ;
     border-color: #2a2a2a;
     border-radius: 15px;
     color: #2a2a2a;
-    font-size: 27px;
+    font-size: 18px;
     font-family:ericma;
     text-decoration: none;
     font-weight: bold;
@@ -160,13 +160,13 @@ body{
   }  
 
 .buttonSubmitDisabled{
-    margin-top:50px;
-    margin-bottom:50px;
-    width: 200px;
-    height: 65px;
+    margin-top:33px;
+    margin-bottom:33px;
+    width: 134px;
+    height: 43px;
     border-color: #2a2a2a;
     border-radius: 15px;    
-    font-size: 27px;
+    font-size: 18px;
     font-family:ericma;
     text-decoration: none;
     font-weight: bold;
@@ -185,18 +185,18 @@ body{
 .estiloDivdiets {
 
     display:flex;
-    width:900px;
-    margin-top:-300px;
+    width:603px;
+    margin-top:-201px;
     margin-bottom:0px;
-    margin-left:400px;
+    margin-left:268px;
 
 }
 
 
 
 .TiposSeleccionadosEstilo {
-    margin-top:50px;
-     margin-left:100px;
+    margin-top:33px;
+     margin-left:67px;
 
   }
   
@@ -209,16 +209,16 @@ ul{
   }
 
 .DivBoton {
-    width:150px;
-    margin-top:100px;
-    margin-left:100px;
+    width:100px;
+    margin-top:67px;
+    margin-left:67px;
 }
 
 .divTitulo{
-    width:400px;
-    margin-top:-150px;
+    width:268px;
+    margin-top:-100px;
     color: #f1f2f7;
-    margin-left:700px;
+    margin-left:469px;
 }
 
 .Contenedor{
@@ -229,8 +229,8 @@ ul{
 .contenedorDiets{
     display:flex;
     justify-content:space-around;
-    margin-left:100px;
-    margin-right:300px;
+    margin-left:67px;
+    margin-right:201px;
 }
 .primeras4Diets{
     display:flex;
@@ -255,22 +255,22 @@ label{
         display:flex;
 }
 .labelTypeDiet{
-     margin-top:10px;
+     margin-top:7px;
      text-decoration: none;
      font-weight: bold;
-     font-size:20px;
+     font-size:13px;
      color: #2a2a2a;
 }
 
 
 .estiloLabelTipos{
-    margin-top:30px;
-    margin-left:105px;
-    margin-bottom:30px;
+    margin-top:20px;
+    margin-left:70px;
+    margin-bottom:20px;
     font-family:ericma;
     text-decoration: none;
     font-weight: bold;
-    font-size:25px;
+    font-size:17px;
 }
 
 
@@ -279,7 +279,7 @@ input {
     border: 1px solid #393939;
     border-radius: 5px 5px 5px 5px;
     color: #2a2a2a;
-    font-size: 12px;
-    padding: 5px;
+    font-size: 8px;
+    padding: 3px;
  }
 

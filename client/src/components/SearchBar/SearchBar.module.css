@@ -5,18 +5,18 @@ body{
 .divBuscar{
     display:flex;
     flex-direction:column;
-    width:400px;
+    width:268px;
     margin-right:0px;
     margin-left:0px;
-    padding-top:10px;
+    padding-top:7px;
 
 }
 
 
 
 .buscarClase{
-    width:250px;
-    height: 42px;
+    width:167px;
+    height: 28px;
     margin-top:20px;
     border:2px solid rgba(0,0,0,0.2);
 border-radius: 12px;
@@ -24,7 +24,7 @@ font-family:ericma;
 text-decoration: none;
 font-weight: bold;
 border-style: solid;
-font-size: 1em;
+font-size: 20px;
 color: #2a2a2a;
 background-color:#aaa8a8;
 
@@ -32,10 +32,10 @@ background-color:#aaa8a8;
 
 .botonBuscar{
     padding:0px;
-    margin-top: 20px;
+    margin-top: 13px;
     margin-left:0px;
-    width: 258px;
-    height: 50px;
+    width: 180px;
+    height: 40px;
   cursor: pointer;
   background-color: #aaa8a8;     
   position:relative;
@@ -45,7 +45,7 @@ background-color:#aaa8a8;
   border-radius: 15px;
   font-family:ericma;
   color: #2a2a2a;
-  font-size: 27px;
+  font-size: 18px;
   text-decoration: none;
   font-weight: bold;
   border-style: solid;
@@ -56,5 +56,5 @@ background-color:#aaa8a8;
    }
 
 .labelBuscarRecetas{
-    margin-left:70px;
+    margin-left:46px;
   }

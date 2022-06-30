@@ -3,15 +3,16 @@
     background-image: url(./20.jpg); 
     background-repeat:no-repeat;
     background-position: center center;
-    height: 1150px;
-    background-size: cover; 
+    height: 770px;
+    background-size: cover;
+    margin-bottom:-40px; 
 }
 
 
 
 .boton{
-    margin-top: 657px;
-    margin-left:-1200px;
+    margin-top: 440px;
+    margin-left:-750px;
     width: 165px;
     height: 65px;
     cursor: pointer;

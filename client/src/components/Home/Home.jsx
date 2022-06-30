@@ -81,8 +81,6 @@ export default function Home() {
 	
 	return (
 		<div>
-			{console.log(allRecipes)}
-
 			<div className={styles.padreTop}>
 				<div className={styles.LinkClase}>
 					<p className={styles.HenryFood}>Henry Food</p>
@@ -137,7 +135,7 @@ export default function Home() {
 							</div>
 
 							<div className={styles.HealthClass}>
-								<label>Filtar por creado:</label>
+								<label>Filtar por creada o existente:</label>
 								<select onChange={e => handleFilterCreated(e)}>
 								<option selected="true" disabled="disabled">Seleccionar</option>
 									<option value='All'>Todos</option>

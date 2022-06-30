@@ -32,7 +32,7 @@ var dietasUnicas=[]
     }  else if (!/^[0-9_-]{1,3}$/.test(input.healthScore) || input.healthScore < 1) {
       errors.healthScore = "El número debe ser mayor que 0 y menor que 1000";
     } else if (!input.steps) {
-      errors.steps = "Este campo es requeridoe";
+      errors.steps = "Este campo es requerido";
     } else if (input.diets.length==0) {
       console.log("errores en diet")
     } 

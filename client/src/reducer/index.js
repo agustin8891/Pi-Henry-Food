@@ -21,26 +21,14 @@ function rootReducer(state=initialState, action) {
 		}
 
 		case 'FILTER_BY_TYPE' : 
-		const creadoOexistenteStatus=state.creadoOexistente
-		const dietTypes=state.diets
-		const allRecipesStatus = state.allRecipes
-		let statusFiltered
-		switch(creadoOexistenteStatus) {
-			case "created":
-					statusFiltered=action.payload==='All' ? allRecipesStatus : allRecipesStatus.filter(el => el.createdInDb && el.diets.includes(action.payload))
-			break;
-			case "api":
-				statusFiltered=action.payload==='All' ? allRecipesStatus : allRecipesStatus.filter(el => !el.createdInDb &&  el.diets.includes(action.payload))
-			break;					
+			let allRecipesStatus = state.allRecipes
+			let statusFiltered=action.payload==='All' ? allRecipesStatus : allRecipesStatus.filter(el => el.diets.includes(action.payload))
 
-			default:
-				statusFiltered=action.payload==='All' ? allRecipesStatus : allRecipesStatus.filter(el => el.diets.includes(action.payload))
 
-			}
 			return {
 				...state,
 				recipes: statusFiltered,
-				typestatus:action.payload
+				/* typestatus:action.payload */
 		}
 
 		case 'FILTER_CREATED':

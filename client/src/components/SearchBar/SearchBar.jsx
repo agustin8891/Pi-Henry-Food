@@ -16,9 +16,10 @@ function handleInputChange(e) {
 }
 
 function handleSubmit(e) {
-	e.preventDefault()
-	dispatch(getNameRecipes(name))
+	e.preventDefault();
 	setCurrentPage(1);
+	dispatch(getNameRecipes(name))
+
 }
 
 return (

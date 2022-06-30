@@ -9,7 +9,7 @@ export default function Card({name, image, key, healthScore, diets}) {
 			<p className={styles.cardStyleName}>{name}</p>
 			<p className={styles.cardStylenombreReceta}><strong>Tipos de dietas: </strong> </p>
 			<p className={styles.cardStyletype}>{diets}</p>
-			<img src = {image} alt="img not found" width="400px" />
+			<img src = {image} alt="img not found" width="268px" />
 			<p className={styles.cardhealthScore}><strong>healthScore: </strong>{healthScore}</p>
 		</div> 
 	);

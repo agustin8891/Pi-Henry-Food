@@ -3,27 +3,27 @@ body{
 }
 
 .cardStyleName{
-    font-size:25px;
+    font-size:16px;
     color:#2a2a2a;   
     text-decoration: none;
 }
 
 .cardStyletype {
-    font-size:25px;
+    font-size:16px;
     color:#2a2a2a;   
 }
 
 .cardhealthScore{
-    font-size:25px;
+    font-size:16px;
     color:#2a2a2a;   
 }
 
 .cardStyletitle{
-    font-size:25px;
+    font-size:16px;
     color:#2a2a2a;   
 }
 
 .cardStylenombreReceta{
-    font-size:25px;
+    font-size:16px;
     color:#2a2a2a;  
 }

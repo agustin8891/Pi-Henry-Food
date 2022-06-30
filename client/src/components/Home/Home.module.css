@@ -11,14 +11,14 @@ body{
 }
 
 .LinkClase{
- padding-top:30px;
-  width:300px;
-  margin:5px;
-  margin-top:10px;
+ padding-top:20px;
+  width:200px;
+  margin:3px;
+  margin-top:7px;
   display:block;
   color:#ffac46; 
   font-weight: italic;
-  font-size: 40px;
+  font-size: 27px;
 }
 
 
@@ -26,13 +26,13 @@ body{
 
 .filtrosyPaginado {
   font-size:5px;
-  width:1200px;
+  width:804px;
   margin-top:20px;
-  height:250px;
+  height:167px;
 }
 
 a{
-   font-size:30px;
+   font-size:20px;
   cursor: pointer;
   text-decoration: none;
 }
@@ -45,8 +45,8 @@ nav{
 li{
   border-radius: 2px;
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 27px;
+  height: 27px;
   background-color: darkgrey;
   color: #2a2a2a;
   margin: 4px;
@@ -54,8 +54,8 @@ li{
 }
 
 .padreDeFiltros {
-  font-size:50px;
-  width:1200px;
+  font-size:22px;
+  width:804px;
   display:flex;
   justify-content: space-around;
   
@@ -64,8 +64,19 @@ li{
 
 .HealthClass{
   margin:2px;
-  font-size:18px;
+  font-size:12px;
   padding-top:20px;
+  display:flex;
+  flex-direction:column;
+ 
+  
+}
+
+.TypeClass {
+  margin:2px;
+  font-size:12px;
+  padding: 7px 10px;
+
   display:flex;
   flex-direction:column;
   
@@ -73,7 +84,7 @@ li{
 
 
 .abcClase {
-  justify-content: space-between;
+/*   justify-content: space-between; */
   font-size:18px;
   padding-top:20px;
   display:flex;
@@ -103,13 +114,13 @@ li{
 }
 
 .paginadoClase{
-  font-size:18px;
+  font-size:12px;
   margin:0px;
-  height:80px;
+  height:53px;
   display:flex;
   justify-content:center;
   margin-top:50px;
-  margin-left:-200px;
+  margin-left:-134px;
 }
 
 .paginasClase{
@@ -125,10 +136,10 @@ li{
 
 .padreDeCards{
 
-    gap:20px;
+    gap:13px;
    display:flex;
-   width: 2000px;
-   margin-left: -90px;
+   width: 1340px;
+   margin-left: -60px;
    margin-top:0px;
    flex-wrap: wrap;
    justify-content: center;
@@ -140,8 +151,8 @@ li{
 .boton{
   padding:0px;
   margin:center;
-  width: 200px;
-  height: 65px;
+  width: 134px;
+  height: 43px;
   cursor: pointer;
   background-color: #aaa8a8 ;
   position:relative;
@@ -150,7 +161,7 @@ li{
   border-color: #2a2a2a;
   border-radius: 15px;
   color: #2a2a2a;
-  font-size: 27px;
+  font-size: 18px;
   font-family:ericma;
   text-decoration: none;
   font-weight: bold;
@@ -167,11 +178,11 @@ li{
 
 
 .padreDeCards > fragment {
-    width: 500px;
-    height:700px;
+    width: 335px;
+    height:470px;
     text-align: center;
-    margin-left:90px;
-    margin-top:45px;   
+    margin-left:60px;
+    margin-top:30px;   
 
     background-color:#aaa8a8  ;
 }
@@ -205,13 +216,13 @@ fragment{
 
 
 .HealthClass{
-	max-width: 250px;
+	max-width: 167px;
 	position: relative;
 }
  
 .HealthClass select{
 	display: inline-block;
-	width: 200px;
+	width: 134px;
 	cursor: pointer;
   	padding: 7px 10px;
   	height: 42px;
@@ -248,8 +259,8 @@ option{
 	position: absolute;
 	right: 20px;
 	top: calc(50% + 5px);
-	width: 16px;
-	height: 16px;
+	width: 10px;
+	height: 10px;
 	display: block;
 	border-left:4px solid #2a2a2a;
 	border-bottom:4px solid #2a2a2a;
