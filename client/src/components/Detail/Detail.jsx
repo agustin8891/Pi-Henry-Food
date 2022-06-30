@@ -56,7 +56,7 @@ function reset() {
 						</div> : <p>Loading...</p>
 					}
 					<Link to ='/home'>
-						<button className={styles.boton} onClick={() => reset()}>Volver</button>
+						<button className={styles.botonDetail} onClick={() => reset()}>Volver</button>
 					</Link> 
 		
 				

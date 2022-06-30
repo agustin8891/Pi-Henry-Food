@@ -82,6 +82,7 @@ export default function Home() {
 	return (
 		<div>
 			{console.log(allRecipes)}
+
 			<div className={styles.padreTop}>
 				<div className={styles.LinkClase}>
 					<p className={styles.HenryFood}>Henry Food</p>

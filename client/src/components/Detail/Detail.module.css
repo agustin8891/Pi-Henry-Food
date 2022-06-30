@@ -36,7 +36,7 @@ body{
     margin-left:50px;
     padding-right:50px;
     border-right: 1px solid #000;
-    text-align:justify;
+    text-align: left;
     /* border-left: 4px dashed blue; */
 }
 
@@ -44,7 +44,7 @@ body{
     margin-left:50px;
     width:650px;
     margin-top:50px;
-    text-align:justify;
+    text-align: left;
 }
 
 /* div { border-left: 4px dashed blue;
@@ -71,7 +71,7 @@ body{
     justify-content:flex-start;
 }
 .detailClass{
-    background-color: #AA6C39;   
+    background-color: #aaa8a8 ;
 margin-top:50px;
 margin-left:100px;
     width: 1700px;
@@ -90,21 +90,29 @@ display:flex;
     margin-left:50px;
 }
 
-.boton{
+.botonDetail{
     padding:0px;
-    width:500px;
-    margin-left:-115px;
-    margin-top:20px;
-    height: 50px;
+    margin:center;
+    width: 800px;
+    height: 65px;
     cursor: pointer;
-    background-color: #AA6C39;    
+    background-color: #aaa8a8 ;
+    position:relative;
     display:inline-block;
-    padding: 0; 
-    border:1px solid #ccc;  
-    text-align: center;
+    padding-top:0px;
+    border-color: #2a2a2a;
+    border-radius: 15px;
+    color: #2a2a2a;
+    font-size: 27px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+    border-style: solid;
+    margin-top:30px;
    }
   
-   .boton:hover{
-    background-color: #AA3939;    
+   .botonDetail:hover{
+    background-color: #ffac46;  
+  
    
   }   

@@ -23,15 +23,18 @@ const getApiInfo = async() => {
 			id: el.id,
             name: el.title,
             healthScore:el.healthScore,
-            summary: el.summary,
+            summary: el.summary.replace( /(<([^>]+)>)/ig, ''),
             diets: el.diets,
             steps: el.analyzedInstructions.length>0 ? (el.analyzedInstructions[0].steps.map (st => st.step)) : (null), 
             image: el.image,
             dishTypes: el.dishTypes
         }
-        })
-	
-    return apiInfo  
+        })	
+
+		let array=apiInfo[0].summary.replaceAll("<b>", "")
+		array=array.replace( /(<([^>]+)>)/ig, '')
+		console.log(array)
+    return apiInfo
 }
 
 // //ARCHIVO
@@ -54,7 +57,7 @@ router.get('/:id', async (req,res) => {
 			 	id: searchId[0].id,
 			 	name: searchId[0].title,
 			 	healthScore:searchId[0].healthScore,
-			 	summary: searchId[0].summary,
+			 	summary: searchId[0].summary.replace( /(<([^>]+)>)/ig, ''),
 			 	diets: searchId[0].diets,
 			 	steps: searchId[0].analyzedInstructions.length>0 ? (searchId[0].analyzedInstructions[0].steps.map (st => st.step)) : (null), 
 			 	image: searchId[0].image,

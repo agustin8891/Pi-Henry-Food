@@ -3,6 +3,10 @@ import {Link, useHistory} from 'react-router-dom';
 import {postRecipe, getDiets} from '../../actions/index'
 import {useDispatch, useSelector} from 'react-redux';
 import styles from './RecipeCreate.module.css'
+import { useNavigate } from 'react-router-dom';
+
+
+
 
 /////////////////////////////////////////////////////////////////////////7
 var dietasUnicas=[]
@@ -43,7 +47,7 @@ export default function RecipeCreate(){
 	const dispatch=useDispatch()
 	const dietTypes = useSelector((state) => state.diets)
     const allRecipes= useSelector ((state) => state.recipes)
-    /* const history= useHistory() */// esto es un metodo del router que me redirige a la ruta que yo le diga
+    const navigate = useNavigate();// esto es un metodo del router que me redirige a la ruta que yo le diga
 
     let dietasDuplicadas=[]
     let indice
@@ -97,7 +101,7 @@ export default function RecipeCreate(){
           steps:"",
           diets:[],
         })
-       /*  history.push('/home') */
+         navigate('/home');
     }
 
      function handleCheckBox(e) {
