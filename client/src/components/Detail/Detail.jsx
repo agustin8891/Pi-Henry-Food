@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {getDetail} from "../../actions/index";
 import {useEffect} from "react";
 import styles from './Detail.module.css'
+import Eliminar from '../Eliminar/Eliminar';
 
 
 
@@ -29,7 +30,9 @@ function reset() {
 
 	return (
 		<div >
-
+								<Eliminar
+										nombre={myRecipe.name}
+								/>
 					{
 							myRecipe.hasOwnProperty('diets') ?
 						<div className={styles.detailClass}>

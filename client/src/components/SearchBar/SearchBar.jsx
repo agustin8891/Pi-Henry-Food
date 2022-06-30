@@ -4,21 +4,22 @@ import {useDispatch} from 'react-redux';
 import {getNameRecipes} from '../../actions';
 import styles from './SearchBar.module.css'
 
-export default function SearchBar() {
+export default function SearchBar({paginado}) {
 	const dispatch = useDispatch()
 	const[name,setName] = useState("")
 	const [currentPage, setCurrentPage] = useState(1)
-	
+console.log(paginado)
 function handleInputChange(e) {
 	e.preventDefault()
 	setName(e.target.value)
 	console.log(name)
 }
 
+
 function handleSubmit(e) {
 	e.preventDefault();
-	setCurrentPage(1);
 	dispatch(getNameRecipes(name))
+	paginado(1)
 
 }
 
@@ -31,7 +32,7 @@ return (
 			className={styles.buscarClase}/>
 		</div>
 		<div>
-			<button type='submit' onClick={(e) => handleSubmit(e)} 
+			<button onClick={(e) => handleSubmit(e)} type='submit'
 			className={styles.botonBuscar}>Buscar</button>
 		</div>
 	</div>

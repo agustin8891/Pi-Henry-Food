@@ -183,7 +183,8 @@ li{
     text-align: center;
     margin-left:60px;
     margin-top:30px;   
-
+    border:1px solid #ccc;  
+    box-shadow: 2px 2px 2px 2px #ccc;
     background-color:#aaa8a8  ;
 }
 

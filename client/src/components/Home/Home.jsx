@@ -9,13 +9,13 @@ import Card from '../Card/Card';
 import SearchBar from '../SearchBar/SearchBar';
 
 export default function Home() {
-
+	console.log("home")
 	const dispatch = useDispatch()
 	const allRecipes = useSelector ((state) => state.recipes)
 
 	const [currentPage, setCurrentPage] = useState(1)
 	const [recipesPerPage, setrecipesPerPage] = useState(9) 
-
+/* 	console.log(currentPage) */
 	const indexOfLastRecipe=currentPage * recipesPerPage 
 	const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage
 	const dietsTypes = useSelector((state) => state.diets)
@@ -48,7 +48,9 @@ export default function Home() {
 	})	
 	
 	const paginado = (pageNumber) => {
+
 		setCurrentPage(pageNumber)
+		console.log(currentPage)
 	}
 	
 
@@ -119,6 +121,7 @@ export default function Home() {
 							<label>Filtrar por tipo de dieta:</label>
 {								<select onChange={e => handleFilterType(e)} className={styles.abcClase}>
 								<option selected="true" disabled="disabled">Seleccionar</option>
+									<option value="All">Todos</option>
 									<option value="gluten free">Gluten Free</option>
 									<option value="dairy free">Dairy Free</option>
 									<option value= "lacto ovo vegetarian">Lacto Ovo Vegetarian</option>
@@ -159,7 +162,7 @@ export default function Home() {
 					</div>
 		
 						
-						<SearchBar/>
+						<SearchBar paginado={paginado} />
 				</div>
 				<div className={styles.padreDeCards}>		
 				{currentRecipes?.map((c) => {

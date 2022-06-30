@@ -42,7 +42,6 @@ function rootReducer(state=initialState, action) {
 			return{
 			...state,
 			recipes: createdFilter,
-			creadoOexistente:action.payload
 		}
 
 		case 'ORDER_BY_NAME':
