@@ -7,6 +7,7 @@ import styles from './SearchBar.module.css'
 export default function SearchBar() {
 	const dispatch = useDispatch()
 	const[name,setName] = useState("")
+	const [currentPage, setCurrentPage] = useState(1)
 	
 function handleInputChange(e) {
 	e.preventDefault()
@@ -17,7 +18,7 @@ function handleInputChange(e) {
 function handleSubmit(e) {
 	e.preventDefault()
 	dispatch(getNameRecipes(name))
-	
+	setCurrentPage(1);
 }
 
 return (
