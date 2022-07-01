@@ -50,7 +50,6 @@ export default function Home() {
 	const paginado = (pageNumber) => {
 
 		setCurrentPage(pageNumber)
-		console.log(currentPage)
 	}
 	
 
@@ -164,21 +163,23 @@ export default function Home() {
 						
 						<SearchBar paginado={paginado} />
 				</div>
+
 				<div className={styles.padreDeCards}>		
-				{currentRecipes?.map((c) => {
-					return (
+						{ currentRecipes.length>0 ?
+						currentRecipes?.map((c) => {
+							return (
 
-						<fragment>							
-							<Link to = {"/home/" + c.id}>
-							<Card name={c.name} image={c.image} key={c.id} healthScore={c.healthScore} diets={c.diets}/>
+								<fragment>							
+									<Link to = {"/home/" + c.id}>
+									<Card name={c.name} image={c.image} key={c.id} healthScore={c.healthScore} diets={c.diets}/>
 
-							</Link>
-						</fragment>
+									</Link>
+								</fragment>
 
-						)
-					})}				
-			</div>
+								)
+							}) : <h1 className={styles.LoadingClass}>Loading...</h1> }				
+				</div> 
 		</div>
-	)
+	) 
 
 }

@@ -32,6 +32,7 @@ function rootReducer(state=initialState, action) {
 		}
 
 		case 'FILTER_CREATED':
+			console.log(action.payload)
 			let createdFilter = state.allRecipes;
 				createdFilter = action.payload === "All"
 				? createdFilter
