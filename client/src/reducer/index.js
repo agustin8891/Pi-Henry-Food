@@ -2,7 +2,9 @@ const initialState = {
 	recipes : [],
 	allRecipes: [],
 	detail:[],
-	diets:[]
+	diets:[],
+	healthScore:""
+
 }
 
 function rootReducer(state=initialState, action) {
@@ -24,28 +26,29 @@ function rootReducer(state=initialState, action) {
 			let allRecipesStatus = state.allRecipes
 			let statusFiltered=action.payload==='All' ? allRecipesStatus : allRecipesStatus.filter(el => el.diets.includes(action.payload))
 
-
 			return {
 				...state,
 				recipes: statusFiltered,
-				/* typestatus:action.payload */
+
 		}
 
 		case 'FILTER_CREATED':
-			console.log(action.payload)
 			let createdFilter = state.allRecipes;
 				createdFilter = action.payload === "All"
 				? createdFilter
 				: action.payload === "created"
 				? createdFilter.filter((p) => p.createdInDb === true)
 				: createdFilter.filter((p) => !p.createdInDb);
- 
+				console.log(state.createdFilter)
+
+
 			return{
 			...state,
 			recipes: createdFilter,
 		}
 
 		case 'ORDER_BY_NAME':
+			console.log("order by name", action.payload)
 			let sortedArr = action.payload === 'asc' ?
 			state.recipes.sort(function(a,b) {
 				if(a.name.toLowerCase() > b.name.toLowerCase()){
@@ -65,12 +68,15 @@ function rootReducer(state=initialState, action) {
 				}
 				return 0;
 			})
+
+
 			return {
 				...state,
 				recipes: sortedArr
 			}
 			
 		case 'ORDER_BY_HEALTHSCORE':
+			console.log(action.payload)
       		const HealthScoreOrder =
         	action.payload === "top"
           	? state.recipes.sort(function (a, b) {
@@ -91,7 +97,13 @@ function rootReducer(state=initialState, action) {
               }
               return 0;
             });
-      return { ...state, recipes: HealthScoreOrder };
+
+			console.log("filtrado ordenamiento por healthscore abajo")
+			console.log(HealthScoreOrder)
+			console.log("filtrado ordenamiento por healthscore arriba")
+      return {
+			...state,
+		recipes: HealthScoreOrder};
 
 		case "GET_DETAILS":
 			return {

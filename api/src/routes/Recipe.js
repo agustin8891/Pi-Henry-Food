@@ -131,7 +131,7 @@ router.get('/:id', async (req,res) => {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-//API
+////////77API
 // const getApiInfo = async() => {  
 // 	console.log("getApiInfo")
 // 	const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_PASSWORD}&number=100&addRecipeInformation=true`)

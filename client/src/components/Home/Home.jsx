@@ -10,30 +10,48 @@ import SearchBar from '../SearchBar/SearchBar';
 
 export default function Home() {
 	console.log("home")
+
+
 	const dispatch = useDispatch()
 	const allRecipes = useSelector ((state) => state.recipes)
 
 	const [currentPage, setCurrentPage] = useState(1)
 	const [recipesPerPage, setrecipesPerPage] = useState(9) 
-/* 	console.log(currentPage) */
 	const indexOfLastRecipe=currentPage * recipesPerPage 
 	const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage
 	const dietsTypes = useSelector((state) => state.diets)
 
+	console.log("allRecipes abajo")
+	console.log(allRecipes)
+	console.log("allRecipes arriba")
+
 
 	let currentRecipes = allRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe)
+	const [orden, setOrden] = useState("")
+	const [count, setCount] = useState(0);
+	let selectFilterTypes = document.getElementById("selectFilterType");
+	let selectFilterCreateds = document.getElementById("selectFilterCreated");
+	let selectselectOrderHealthScores = document.getElementById("selectOrderHealthScore");
+	let selectSorts = document.getElementById("selectSort");
 
-
-	const [orden, setOrden] = useState('')
 
 	useEffect(() => {
-		dispatch(getRecipes());
-	},[dispatch])
+		dispatch(getDiets())					
+		dispatch(getRecipes())
+		console.log("useffect de montaje")  // es
+		
+	},[])	
+
 
 	useEffect(() => {
-		dispatch(getDiets())
-	},[]);
+				console.log("useffect de actualización") 
+	},[count])
 
+// 	useEffect(() => {
+//  // esto hace que se ejecute la primera vez que el componente home se renderice
+// /* 		;  */
+// 	},[]);					// en el doom
+						
 
 
 	const[input, setInput] = useState({
@@ -48,7 +66,6 @@ export default function Home() {
 	})	
 	
 	const paginado = (pageNumber) => {
-
 		setCurrentPage(pageNumber)
 	}
 	
@@ -56,27 +73,47 @@ export default function Home() {
 
 
 	function handleFilterType(e) {		
+		console.log("home", e.target.value)
 		dispatch(filterDietByType(e.target.value))
 		setCurrentPage(1);
+		selectFilterCreateds.value = "Seleccionar";  
+		selectselectOrderHealthScores.value = "Seleccionar"; 
+		selectSorts.value = "Seleccionar"; 
+		setCount(count + 1);
 	}
 
 	function handleFilterCreated (e) {
+		console.log("home", e.target.value)
 		dispatch(filterCreated(e.target.value))
-		setCurrentPage(1);
+		setCurrentPage(1); 
+		selectFilterTypes.value = "Seleccionar";
+		selectselectOrderHealthScores.value = "Seleccionar"; 
+		selectSorts.value = "Seleccionar";  
+		setCount(count + 1);
 	}
 
 	function handleSort (e) {
+		console.log("home", e.target.value)
 		e.preventDefault();
 		dispatch(orderByName(e.target.value))
 		setCurrentPage(1);
-		setOrden(`Ordenado ${e.target.value}`)
+		setOrden(`Ordenado ${e.target.value}`)		
+		selectFilterCreateds.value = "Seleccionar";  
+		selectFilterTypes.value = "Seleccionar";
+		selectselectOrderHealthScores.value = "Seleccionar";
+		setCount(count + 1); 
 	};
 
 	  function handleOrderHealthScore(e) {
+		console.log("home", e.target.value)
 		e.preventDefault();
 		dispatch(orderByHealthScore(e.target.value));
 		setCurrentPage(1);
 		setOrden(`ordered ${e.target.value}`);
+		selectFilterCreateds.value = "Seleccionar";  
+		selectFilterTypes.value = "Seleccionar";
+		selectSorts.value = "Seleccionar"; 
+		setCount(count + 1);
 	  }
 
 	
@@ -94,12 +131,13 @@ export default function Home() {
 
 					<div className={styles.filtrosyPaginado}>
 						<div className={styles.padreDeFiltros}>
+							
 							<div className={styles.HealthClass}>
 								<label>Ordenar por HealthScore:</label>
-								<select
+								<select id="selectOrderHealthScore"
 									onChange={(e) => handleOrderHealthScore(e)}
 									>
-									<option selected="true" disabled="disabled">Seleccionar</option>
+									<option value="Seleccionar" selected="true" disabled="disabled">Seleccionar</option>
 									<option value="top">Ascendente</option>
 									<option value="bottom">Descendente</option>
 								</select>
@@ -108,8 +146,9 @@ export default function Home() {
 
 							<div className={styles.HealthClass}>
 								<label>Ordenar alfabéticamente:</label>
-									<select onChange={e => handleSort(e)}>
-									<option selected="true" disabled="disabled">Seleccionar</option>
+									<select id="selectSort"
+									onChange={e => handleSort(e)}>
+										<option value="Seleccionar" selected="true" disabled="disabled">Seleccionar</option>
 										<option value='asc'>Ascendente</option>
 										<option value='desc'>Descendente</option>
 									</select>	
@@ -118,8 +157,9 @@ export default function Home() {
 
 							<div className={styles.HealthClass}>
 							<label>Filtrar por tipo de dieta:</label>
-{								<select onChange={e => handleFilterType(e)} className={styles.abcClase}>
-								<option selected="true" disabled="disabled">Seleccionar</option>
+{								<select id="selectFilterType"
+									onChange={e => handleFilterType(e)} className={styles.abcClase}>
+								<option value="Seleccionar" selected="true" disabled="disabled">Seleccionar</option>
 									<option value="All">Todos</option>
 									<option value="gluten free">Gluten Free</option>
 									<option value="dairy free">Dairy Free</option>
@@ -138,8 +178,9 @@ export default function Home() {
 
 							<div className={styles.HealthClass}>
 								<label>Filtar por creada o existente:</label>
-								<select onChange={e => handleFilterCreated(e)}>
-								<option selected="true" disabled="disabled">Seleccionar</option>
+								<select  id="selectFilterCreated"
+									onChange={e => handleFilterCreated(e)}>
+								<option value="Seleccionar" selected="true" disabled="disabled">Seleccionar</option>
 									<option value='All'>Todos</option>
 									<option value='created'>Creados</option>
 									<option value='api'>Existentes</option>
@@ -167,6 +208,7 @@ export default function Home() {
 				<div className={styles.padreDeCards}>		
 						{ currentRecipes.length>0 ?
 						currentRecipes?.map((c) => {
+
 							return (
 
 								<fragment>							
