@@ -4,7 +4,7 @@ import {useDispatch} from 'react-redux';
 import {getNameRecipes} from '../../actions';
 import styles from './SearchBar.module.css'
 
-export default function SearchBar({paginado}) {
+export default function SearchBar({paginado, resetSelects}) {
 	const dispatch = useDispatch()
 	const[name,setName] = useState("")
 	const [currentPage, setCurrentPage] = useState(1)
@@ -13,6 +13,7 @@ function handleInputChange(e) {
 	e.preventDefault()
 	setName(e.target.value)
 	console.log(name)
+
 }
 
 
@@ -20,7 +21,7 @@ async function handleSubmit(e) {
 	e.preventDefault();
 	await dispatch(getNameRecipes(name))
 	paginado(1)
-
+	resetSelects()
 }
 
 return (

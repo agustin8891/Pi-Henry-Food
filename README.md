@@ -142,7 +142,7 @@ __Ruta de creación de recetas__: debe contener
 - [ ] Posibilidad de seleccionar/agregar uno o más tipos de dietas
 - [ ] Botón/Opción para crear una nueva receta
 
-> Es requisito que el formulario de creación esté validado con JavaScript y no sólo con validaciones HTML. Pueden agregar las validaciones que consideren. Por ejemplo: Que el nombre de la receta no pueda contener símbolos, que el health score no pueda exceder determinado valor, etc.
+> Es requisito que el formulario de creación e sté validado con JavaScript y no sólo con validaciones HTML. Pueden agregar las validaciones que consideren. Por ejemplo: Que el nombre de la receta no pueda contener símbolos, que el health score no pueda exceder determinado valor, etc.
 
 ## Base de datos
 

@@ -39,8 +39,6 @@ function rootReducer(state=initialState, action) {
 				: action.payload === "created"
 				? createdFilter.filter((p) => p.createdInDb === true)
 				: createdFilter.filter((p) => !p.createdInDb);
-				console.log(state.createdFilter)
-
 
 			return{
 			...state,
@@ -48,7 +46,6 @@ function rootReducer(state=initialState, action) {
 		}
 
 		case 'ORDER_BY_NAME':
-			console.log("order by name", action.payload)
 			let sortedArr = action.payload === 'asc' ?
 			state.recipes.sort(function(a,b) {
 				if(a.name.toLowerCase() > b.name.toLowerCase()){
@@ -76,7 +73,6 @@ function rootReducer(state=initialState, action) {
 			}
 			
 		case 'ORDER_BY_HEALTHSCORE':
-			console.log(action.payload)
       		const HealthScoreOrder =
         	action.payload === "top"
           	? state.recipes.sort(function (a, b) {
@@ -98,9 +94,6 @@ function rootReducer(state=initialState, action) {
               return 0;
             });
 
-			console.log("filtrado ordenamiento por healthscore abajo")
-			console.log(HealthScoreOrder)
-			console.log("filtrado ordenamiento por healthscore arriba")
       return {
 			...state,
 		recipes: HealthScoreOrder};

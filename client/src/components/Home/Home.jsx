@@ -15,18 +15,13 @@ export default function Home() {
 	const dispatch = useDispatch()
 	const allRecipes = useSelector ((state) => state.recipes)
 
-	const [currentPage, setCurrentPage] = useState(1)
+	const [currentPage, setCurrentPage] = useState(1) // cuando currentPage vale 1 /// 2 // pagina 13
 	const [recipesPerPage, setrecipesPerPage] = useState(9) 
-	const indexOfLastRecipe=currentPage * recipesPerPage 
-	const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage
+	const indexOfLastRecipe=currentPage * recipesPerPage  //  1 * 9 = 9 ///// 2 * 9 = 18 //   13*9= 117
+	const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage // 9-9 = 0 /// 18-9=9 ////117-9 = 108 
 	const dietsTypes = useSelector((state) => state.diets)
-
-	console.log("allRecipes abajo")
 	console.log(allRecipes)
-	console.log("allRecipes arriba")
-
-
-	let currentRecipes = allRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe)
+	let currentRecipes = allRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe) //slice(0,9) => 9 recetas /// slice(9,18) => 9 recetas//slice(108,117) =>9 recetas
 	const [orden, setOrden] = useState("")
 	const [count, setCount] = useState(0);
 	let selectFilterTypes = document.getElementById("selectFilterType");
@@ -38,7 +33,7 @@ export default function Home() {
 	useEffect(() => {
 		dispatch(getDiets())					
 		dispatch(getRecipes())
-		console.log("useffect de montaje")  // es
+		console.log("useffect de montaje")  
 		
 	},[])	
 
@@ -47,33 +42,21 @@ export default function Home() {
 				console.log("useffect de actualización") 
 	},[count])
 
-// 	useEffect(() => {
-//  // esto hace que se ejecute la primera vez que el componente home se renderice
-// /* 		;  */
-// 	},[]);					// en el doom
-						
-
-
-	const[input, setInput] = useState({
-		name:"",
-		life:"",
-		attack:"",
-		defense:"",
-        speed:"",
-		height:"",
-		weight:"",
-		types:[]
-	})	
 	
 	const paginado = (pageNumber) => {
 		setCurrentPage(pageNumber)
 	}
 	
+const resetSelects =() => {
+	selectFilterCreateds.value = "Seleccionar";  
+	selectselectOrderHealthScores.value = "Seleccionar"; 
+	selectSorts.value = "Seleccionar"; 
+	selectFilterTypes.value = "Seleccionar";
+}
 
 
 
 	function handleFilterType(e) {		
-		console.log("home", e.target.value)
 		dispatch(filterDietByType(e.target.value))
 		setCurrentPage(1);
 		selectFilterCreateds.value = "Seleccionar";  
@@ -83,7 +66,6 @@ export default function Home() {
 	}
 
 	function handleFilterCreated (e) {
-		console.log("home", e.target.value)
 		dispatch(filterCreated(e.target.value))
 		setCurrentPage(1); 
 		selectFilterTypes.value = "Seleccionar";
@@ -93,7 +75,6 @@ export default function Home() {
 	}
 
 	function handleSort (e) {
-		console.log("home", e.target.value)
 		e.preventDefault();
 		dispatch(orderByName(e.target.value))
 		setCurrentPage(1);
@@ -105,7 +86,6 @@ export default function Home() {
 	};
 
 	  function handleOrderHealthScore(e) {
-		console.log("home", e.target.value)
 		e.preventDefault();
 		dispatch(orderByHealthScore(e.target.value));
 		setCurrentPage(1);
@@ -119,6 +99,7 @@ export default function Home() {
 	
 	return (
 		<div>
+				{console.log("return home")}
 			<div className={styles.padreTop}>
 				<div className={styles.LinkClase}>
 					<p className={styles.HenryFood}>Henry Food</p>
@@ -202,22 +183,19 @@ export default function Home() {
 					</div>
 		
 						
-						<SearchBar paginado={paginado} />
+						<SearchBar paginado={paginado} resetSelects={resetSelects} />
 				</div>
 
-				<div className={styles.padreDeCards}>		
+				<div className={styles.padreDeCards}>	
+
 						{ currentRecipes.length>0 ?
 						currentRecipes?.map((c) => {
-
 							return (
-
 								<fragment>							
 									<Link to = {"/home/" + c.id}>
-									<Card name={c.name} image={c.image} key={c.id} healthScore={c.healthScore} diets={c.diets}/>
-
+										<Card name={c.name} image={c.image} key={c.id} healthScore={c.healthScore} diets={c.diets}/>
 									</Link>
 								</fragment>
-
 								)
 							}) : <h1 className={styles.LoadingClass}>Loading...</h1> }				
 				</div> 

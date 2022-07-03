@@ -20,7 +20,7 @@ router.get('/', async(req, res) => {
  	for (let i=0; i<ArchivoJson.length; i++) {
 
 		for (let j=0; j<ArchivoJson[i].diets.length; j++) {
-			let [diet, created] = await Diet.findOrCreate({ // como dije antes: debo revisar esto pq no se si está del todo bien
+			let [diet, created] = await Diet.findOrCreate({
 				where: { name:  ArchivoJson[i].diets[j]
 				},
 				defaults: {
@@ -49,7 +49,7 @@ router.get('/', async(req, res) => {
 // 	const ArchivoJson = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_PASSWORD}&number=100&addRecipeInformation=true`)
 // 	for (let i=0; i<ArchivoJson.length; i++) {
 // 		for (let j=0; j<ArchivoJson[i].diets.length; j++) {
-// 			let [diet, created] = await Diet.findOrCreate({ // como dije antes: debo revisar esto pq no se si está del todo bien
+// 			let [diet, created] = await Diet.findOrCreate({ 
 // 				where: { name:  ArchivoJson[i].diets[j]
 // 				},
 // 				defaults: {
