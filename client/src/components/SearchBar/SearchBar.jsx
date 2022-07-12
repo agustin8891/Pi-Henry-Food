@@ -19,7 +19,7 @@ function handleInputChange(e) {
 
 async function handleSubmit(e) {
 	e.preventDefault();
-	await dispatch(getNameRecipes(name))
+	dispatch(getNameRecipes(name))
 	paginado(1)
 	resetSelects()
 }

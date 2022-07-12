@@ -1,6 +1,13 @@
 import axios from 'axios'
 
 
+export function limpiarRecetas() {
+	console.log("limpiar action")
+	return{
+		type:'LIMPIAR_RECETAS'
+	}
+}
+
 export function getRecipes() {
 	return async function(dispatch){
 		var json = await axios.get(`/Recipes`);
@@ -11,13 +18,18 @@ export function getRecipes() {
 	}
 }
 
-export function filterDietByType(payload) {
 
+
+
+export function filterDietByType(payload) {
 	return{
 		type: 'FILTER_BY_TYPE',
 		payload,
 	}
 }
+
+
+
 
 export function filterCreated(payload) {
 	return{
@@ -39,44 +51,19 @@ export function getNameRecipes(name) {
 			var json=await axios.get(`/Recipes?name=` + name)
 			return dispatch ({
 				type: "GET_NAME_RECIPES",
-				payload: json.data
-				
+				payload: json.data				
 			})
 		} catch(error) {
+			console.log(error)
 			alert("Receta no encontrada")
 		}
 	}	
-}	
-export function getDiets() {
-	return async function(dispatch) {
-		var info = await axios.get(`/diets`)
-		return dispatch({type: 'GET_DIETS', payload: info.data} );
-	};
 }
-
-export function postRecipe (payload) {
-	return async function(dispatch){
-		const response = await axios.post(`/Recipes`, payload)
-
-		return response;
-	}
-}
-
-
-  
-  export function orderByHealthScore(payload) {
-	return { type: 'ORDER_BY_HEALTHSCORE', payload };
-  }
-
-
-
 
 
 
 export function getDetail(id){
-
 	return async function (dispatch) {
-		console.log(id)
 		try{
 			var json = await axios.get(`/Recipes/` + id);
 			return dispatch({
@@ -84,8 +71,123 @@ export function getDetail(id){
 				payload: json.data
 			})			
 		} catch(error) {
-			console.log(error)
 			alert("no existe el id solicitado")
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ export function getDiets() {
+	return async function(dispatch) {
+		var info = await axios.get(`/diets`)
+		return dispatch({type: 'GET_DIETS', payload: info.data} );
+	};
+} 
+
+
+
+
+/* export const getDiets = () => (dispatch) => {
+	return axios.get(`/diets`)
+	.then(response => dispatch({type: 'GET_DIETS', payload:response.data}))
+} */
+
+ export function postRecipe (payload) {
+
+	return async function(dispatch){
+		const response = await axios.post(`/Recipes`, payload)
+		return response;
+	}
+}
+ 
+
+export function deleteRecipe (id) {
+
+ 	return async function(dispatch){
+		const response = await axios.delete(`/Recipes/` + id)
+		console.log(response)
+		return response;
+	} 
+}
+
+/* export function deleteRecipe(id){
+	return async function (dispatch) {
+		console.log(id)
+		try{
+			var json = await axios.get(`/Recipes/` + id);
+			return dispatch({
+				type: "DELETE_RECIPE",
+				payload: json.data
+			})			
+		} catch(error) {
+			console.log(error)
+			alert("No se puede eliminar la receta")
+		}
+	}
+} */
+
+
+
+
+  
+  export function orderByHealthScore(payload) {
+
+	return { type: 'ORDER_BY_HEALTHSCORE', payload };
+  }
+
+
+
+export function UpdateRecipe(payload, id) {
+	console.log(payload)
+
+	return async function (dispatch) {
+/* 		try{ */
+			var json = await axios.put(`/Recipes/` + payload.id, payload);
+
+			return dispatch({
+				type: "UPDATE_RECIPE",
+				payload: json.data
+			})			
+/* 		} catch(error) {
+			console.log(error)
+			alert("No se puede actualizar la receta")
+		} */
+	}
+}
+
+
+// export const UpdateRecipe = (payload) => (id) => {
+// 	console.log(payload)
+// 	console.log(id)
+// 	return async function (dispatch) {
+// /* 		try{ */
+// 			var json = await axios.put(`/Recipes/` + payload.id, payload);
+
+// 			return dispatch({
+// 				type: "UPDATE_RECIPE",
+// 				payload: json.data
+// 			})			
+// /* 		} catch(error) {
+// 			console.log(error)
+// 			alert("No se puede actualizar la receta")
+// 		} */
+// 	}
+// }
+
+
+

@@ -18,7 +18,6 @@ const {API_PASSWORD} = process.env;
 const getApiInfo = async() => {  
     let apiUrl= dataJson	
     const apiInfo = await apiUrl.results.map(el => { // esto debo verlo bien despues
-
         return{ 
 			id: el.id,
             name: el.title,
@@ -31,9 +30,6 @@ const getApiInfo = async() => {
         }
         })	
 
-		let array=apiInfo[0].summary.replaceAll("<b>", "")
-		array=array.replace( /(<([^>]+)>)/ig, '')
-		console.log(array)
     return apiInfo
 }
 
@@ -48,7 +44,8 @@ router.get('/:id', async (req,res) => {
                 let RecipeDb = await getDbInfo()               
 				recipe = RecipeDb.filter(function(el) {
 	             return el.id === id; }) 
-				res.send(recipe[0])                         
+				 console.log("termino busqueda bd")
+				recipe=recipe[0]                        
 		 } else {
 			let apiUrl= dataJson
 			let searchId = apiUrl.results.filter(function(el) {
@@ -61,12 +58,13 @@ router.get('/:id', async (req,res) => {
 			 	diets: searchId[0].diets,
 			 	steps: searchId[0].analyzedInstructions.length>0 ? (searchId[0].analyzedInstructions[0].steps.map (st => st.step)) : (null), 
 			 	image: searchId[0].image,
-			 	dishTypes: searchId[0].dishTypes											
+			 	dishTypes: searchId[0].dishTypes
+										
 			 				}		
-							 res.send(recipe)		
-		 	}
-		
+		 	}		
+			 res.send(recipe)	
 		} catch(error) {
+			console.log(error)
 			res.status(404).send(error)
 		}	
 	})
@@ -108,11 +106,17 @@ router.get('/:id', async (req,res) => {
 											}
 											arrayApiRecipes.push(recipeApi)
 
-								} 								
+								} 	
+						
 																
 										}
 										let arrayRecipesAll = arrayApiRecipes.concat(recipeBd);
-										res.status(200).send(arrayRecipesAll) 		
+					 					if(arrayRecipesAll.length>0) {
+											res.status(200).send(arrayRecipesAll) 		
+										} else {
+											res.status(404).send(err)	
+										}	
+	
 
 						}
 						catch(err) {
@@ -131,7 +135,7 @@ router.get('/:id', async (req,res) => {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-////////77API
+//////77API
 // const getApiInfo = async() => {  
 // 	console.log("getApiInfo")
 // 	const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_PASSWORD}&number=100&addRecipeInformation=true`)
@@ -156,6 +160,7 @@ router.get('/:id', async (req,res) => {
 
 // router.get('/', async (req,res) => {
 // 	const name= req.query.name
+// 	console.log(name)
 //     let recipe
 // 	let arrayApiRecipes=[]
 // 	console.log("get")
@@ -175,7 +180,6 @@ router.get('/:id', async (req,res) => {
 // 							})
 
 // 					recipeBd=recipeBd.map((e) => ({...e.dataValues, diets: e.diets.map((e) => e.name)}));
-// 					console.log(API_PASSWORD)
 // 					nameMinuscula=name.toLowerCase()
 // 					const buscarApi = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_PASSWORD}&number=100&addRecipeInformation=true`)
 // 					const buscarNombreApi=buscarApi.data.results
@@ -198,9 +202,11 @@ router.get('/:id', async (req,res) => {
 // 					 }
 					
 // 										let arrayRecipesAll = arrayApiRecipes.concat(recipeBd);
-// 										console.log(arrayRecipesAll)
-// 										res.status(200).send(arrayRecipesAll) 		
-
+// 					 					if(arrayRecipesAll.length>0) {
+// 											res.status(200).send(arrayRecipesAll) 		
+// 										} else {
+// 											res.status(404).send(err)	
+// 										}	
 // 						}
 // 						catch(err) {
 // 							res.status(404).send(err)
@@ -216,11 +222,10 @@ router.get('/:id', async (req,res) => {
 
 
 // router.get('/:id', async (req,res) => {
-
+// 	const id = req.params.id;
+// 		if(id) {
 // 		 try {	
-// 			const id = req.params.id;
 // 			let recipe
-
 // 			if(typeof id === 'string' && id.length > 8) {            
 // 	                let RecipeDb = await getDbInfo()               
 // 					recipe = RecipeDb.filter(function(el) {
@@ -245,7 +250,8 @@ router.get('/:id', async (req,res) => {
 // 				res.send(recipe)				
 // 			} catch(error) {
 // 				res.status(404).send(error)
-// 			}	
+// 			}
+// 		}	
 // 		})
 
 
@@ -254,10 +260,7 @@ router.get('/:id', async (req,res) => {
 ///////////////////////////////////////////////////////////////////////////////////////////////API
 
 
-//debo revisar bien la ruta del post pq lo hice como me parece pero no se si puede haber problemas con 
-// la tabla intermedia
 router.post('/', async (req,res) => {
-
 	let {
         name,
         healthScore,
@@ -285,14 +288,6 @@ router.post('/', async (req,res) => {
 })
 
 
-
-
-
-
-
-
-
-
 const getDbInfo = async() => {
 	let r=await Recipe.findAll({
 		include: {
@@ -316,5 +311,53 @@ const getAllRecipes = async() => {
 	const infoTotal = apiInfo.concat(dbInfo);
 	return infoTotal 
 }
+
+
+
+
+router.put("/:id", async(req,res) => {
+	const {id}=req.params
+	console.log(id)
+	const {name, healthScore, summary, diets, steps, image} = req.body
+	console.log(diets?.map(diet => diet))
+	console.log(diets)
+	if(id){
+		Recipebuscar=await Recipe.findByPk(id)
+		if(Recipebuscar){	
+			Recipebuscar.name=name
+			Recipebuscar.healthScore=healthScore
+			Recipebuscar.summary=summary
+			Recipebuscar.diets=diets?.map((diet) => diet)
+			Recipebuscar.steps=steps
+			Recipebuscar.image=image
+			if(Recipebuscar) await Recipebuscar.save()
+			res.send(Recipebuscar)
+		}
+	} else {
+		res.send("No se pudo actualziar")
+	}
+})
+
+
+
+
+
+router.delete("/:id", async (req,res) => {
+	const {id} = req.params
+	try{
+	if(id) {
+			const buscarElemento = await Recipe.findByPk(id)
+			if(buscarElemento) {
+				Recipe.destroy({where:{id:id}})
+				res.send("elemento eliminado")
+			} else {
+				res.send("no encontrado")
+			}
+	}
+	} catch(error) {
+		res.send(error)
+	}
+})
+
 
 module.exports = router;

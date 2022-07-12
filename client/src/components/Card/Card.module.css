@@ -5,7 +5,11 @@ body{
 .cardStyleName{
     font-size:16px;
     color:#2a2a2a;   
+    font-family:ericma;
     text-decoration: none;
+    font-weight: bold;
+    margin-top:-15px;
+    margin-bottom:10px;
 }
 
 .cardStyletype {
@@ -19,11 +23,29 @@ body{
 }
 
 .cardStyletitle{
-    font-size:16px;
+    font-size:22px;
     color:#2a2a2a;   
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .cardStylenombreReceta{
     font-size:16px;
     color:#2a2a2a;  
+    
+}
+
+
+.tipoDietaEstiloDiv {
+    color:#2a2a2a;
+    text-align:left;
+    margin-left:70px;
+
+}
+.tipoDietaEstilo{
+    display:flex;
+    flex-direction:column;
+    color:#2a2a2a;
+    margin-bottom:10px;
 }

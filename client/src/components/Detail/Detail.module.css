@@ -14,10 +14,40 @@ body{
 
 .className{
     margin-top:33px;
-
     margin-left:7px;
 
 }
+
+.dietsStyleTitle{
+    margin-bottom:-30px;
+    padding:0px;
+}
+
+.dietsStyleText{
+    font-size: 20px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right:40px;
+    color: #2a2a2a;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.healthScoreData{
+    text-decoration: none;
+    font-weight: bold;
+    margin-left:10px;
+    margin-right:40px;
+    color: #2a2a2a;
+    font-size:30px;
+    margin-top:0px;
+}
+
+alert{
+    cursor: pointer;
+  }
+
 
 .classh1 {
     margin-top:15px;
@@ -31,20 +61,65 @@ body{
     justify-content:flex-start;
 
 } */
+
 .summaryStyle{
-    width:570px;
+    font-size: 20px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right:40px;
+}
+
+.summaryStyleTitle{
+    text-align:left;
+    margin-left:35px;
+}
+
+
+
+
+.summaryStyleText{
+    
     margin-left:33px;
+    margin-bottom:0px;
     padding-right:33px;
-    border-right: 1px solid #000;
     text-align: left;
+    color: #2a2a2a;
+    font-size: 16px;
+    font-family:ericma;
+    text-decoration: none;
+/*     font-size: 30px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold; */
+    
     /* border-left: 4px dashed blue; */
 }
 
 .stepsStyle{
     margin-left:33px;
-    width:435px;
-    margin-top:33px;
+    width:500px;
+    margin-top:0px;
+    margin-bottom:30px;
     text-align: left;
+    border-right: 1px solid #000;
+
+}
+
+.stepsStyleTitle{
+    font-size: 20px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.stepsStyleText{
+    color: #2a2a2a;
+    font-size: 16px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+
 }
 
 /* div { border-left: 4px dashed blue;
@@ -53,13 +128,26 @@ body{
     width: 100px;
     font-weight: bold; } */
 .healthDiets{
-    margin-top:201px;
+    margin-top:40px;
     display:flex;
+    text-align:left;
+    margin-left:30px;
+    font-size: 30px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
     flex-direction:column;
 }
 
+
+.healthScoreStyle{
+    display:flex;
+    flex-direction:row;
+}
+
+
 .healthDietSsteps {
-    width:502px;
+   /*  width:502px; */
     display:flex;
     flex-direction:column;
 
@@ -74,8 +162,10 @@ body{
     background-color: #aaa8a8 ;
 margin-top:33px;
 margin-left:67px;
-    width: 1139px;
-    height:871px;
+margin-right:200px;
+    min-width: 600px;
+    max-width:1000px;
+   /*  height:871px; */
     padding:0px;
 border:1px solid #ccc;  
 box-shadow: 2px 2px 2px 2px #ccc;
@@ -84,7 +174,7 @@ display:flex;
 }
 
 .imagedetail {
-    width:603px;
+    width:500px;
     margin-bottom:27px;
     margin-top:33px;
     margin-left:33px;
@@ -116,3 +206,14 @@ display:flex;
   
    
   }   
+
+  .divBotones{
+    display:flex;
+    margin-left:80px;
+    width:800px;
+  }
+
+  .textBotones{
+
+    color:red;
+  }

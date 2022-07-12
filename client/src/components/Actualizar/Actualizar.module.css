@@ -1,0 +1,308 @@
+body{
+    background-color:#2a2a2a;
+    text-align:justify; 
+    display:block;
+}
+
+.formulario
+ {
+    display:flex;
+    flex-direction:column;
+    margin-left:268px;
+    margin-right:268px; 
+    background-color:#eeeeee;
+    margin-bottom:335px;
+}
+
+.botonVolver{
+    padding:0px;
+    margin-left:0px;
+    margin-bottom:0px;
+    width: 110px;
+    height: 43px;
+    cursor: pointer;
+    background-color: #aaa8a8 ;   
+    border-color: #2a2a2a;
+    border-radius: 15px;
+    display:inline-block;
+    font-size: 18px;
+    color: #2a2a2a;
+    border:1px solid #ccc;  
+    text-align: center;
+    
+   }
+  
+   .botonVolver:hover{
+    background-color: #ffac46;   
+   
+  }   
+
+
+.favorito
+{
+    width:407px;
+    color:#57585a;
+    margin-bottom:7px;
+    margin-top:3px;  
+}
+
+
+.submit
+{
+    margin-top:13px;
+    width: 408px;
+    background-color:#eeeeee;
+}
+
+.estiloError{
+    margin-bottom:-16px;
+    margin-top:0px;
+    padding:0px;
+    color:red;
+    font-size:13px
+}
+
+
+.estiloInput{
+    width:603px;
+    margin:0px;
+    height:23px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:13px;
+    color: #2a2a2a;
+
+}
+
+.estiloDiv {
+
+    display:flex;
+    flex-direction:column;
+    font-size:13px;
+
+}
+
+.estiloInputStep {
+    display:flex;
+    flex-direction:column;
+    font-size:13px;
+    height:67px;
+    width:536px;
+    height:23px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:13px;
+    color: #2a2a2a;
+}
+
+.estiloDivUltimo {
+
+    display:flex;
+    flex-direction:column;
+    font-size:13px;
+    height: 201px;
+    margin-top:7px;
+
+}
+
+.estiloLabel {
+
+    display:flex;
+    margin-left:70px;
+    margin-top:20px;
+    margin-bottom:7px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:16px;
+    color: #2a2a2a;
+
+
+}
+
+
+.typeCard{
+    margin-top:20px;
+    margin-bottom:0px;
+    margin-left:67px;
+    font-size:13px; 
+    display:flex;
+    width:67px;
+}
+
+.boton:hover{
+    background-color: #AA3939;    
+   
+  }   
+
+.buttonSubmit{
+    margin-top:33px;
+    margin-bottom:33px;
+    width: 134px;
+    height: 43px;
+    cursor: pointer;
+    background-color: #aaa8a8 ;
+    border-color: #2a2a2a;
+    border-radius: 15px;
+    color: #2a2a2a;
+    font-size: 18px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+    border-style: solid;
+}
+
+   .buttonSubmit:hover{
+    background-color: #ffac46;  
+  
+   
+  }  
+
+.buttonSubmitDisabled{
+    margin-top:33px;
+    margin-bottom:33px;
+    width: 134px;
+    height: 43px;
+    border-color: #2a2a2a;
+    border-radius: 15px;    
+    font-size: 18px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+    border-style: solid;
+
+
+   }
+
+
+
+.estiloP{
+    margin-top:0px;
+    margin-left:0px;
+    margin-left: 200px;
+    text-align:left;
+    font-family: ericma;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+  
+.estiloInputdisabled{
+    font-size: 0;
+
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+    border-style: none;
+    border: 0;
+}
+
+
+
+
+
+
+.estiloDivdiets {
+
+    display:flex;
+    width:603px;
+    margin-top:-201px;
+    margin-bottom:0px;
+    margin-left:268px;
+
+}
+
+
+
+.TiposSeleccionadosEstilo {
+    margin-top:33px;
+     margin-left:67px;
+
+  }
+  
+  .botonCierreTipo {
+    cursor: pointer;
+  }
+
+ul{
+    list-style: none;
+  }
+
+.DivBoton {
+    width:100px;
+    margin-top:67px;
+    margin-left:67px;
+}
+
+.divTitulo{
+    width:268px;
+    margin-top:-100px;
+    color: #f1f2f7;
+    margin-left:469px;
+}
+
+.Contenedor{
+    display:block;
+}
+
+
+.contenedorDiets{
+    display:flex;
+    justify-content:space-around;
+    margin-left:67px;
+    margin-right:201px;
+}
+.primeras4Diets{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+
+}
+
+
+
+.segundas4Diets{
+    display:flex;
+    flex-direction:column;
+}
+
+.ultimas3Diets{
+    display:flex;
+    flex-direction:column;
+}
+
+label{   
+        display:flex;
+}
+.labelTypeDiet{
+     margin-top:7px;
+     text-decoration: none;
+     font-weight: bold;
+     font-size:13px;
+     color: #2a2a2a;
+}
+
+
+.estiloLabelTipos{
+    margin-top:20px;
+    margin-left:70px;
+    margin-bottom:20px;
+    font-family:ericma;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:17px;
+
+}
+
+
+input {
+    background: #f1f2f7;
+    border: 1px solid #393939;
+    border-radius: 5px 5px 5px 5px;
+    color: #2a2a2a;
+    font-size: 8px;
+    padding: 3px;
+ }
+

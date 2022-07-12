@@ -1,15 +1,16 @@
 import React, {useState, useEffect} from 'react';
-import {Link, useHistory} from 'react-router-dom';
-import {postRecipe, getDiets, getRecipes} from '../../actions/index'
+import {Link, useHistory, useParams} from 'react-router-dom';
+import {postRecipe, getDiets, getRecipes, UpdateRecipe,limpiarRecetas, getDetail} from '../../actions/index'
 import {useDispatch, useSelector} from 'react-redux';
-import styles from './RecipeCreate.module.css'
+import styles from './Actualizar.module.css'
 import { useNavigate } from 'react-router-dom';
 
 
 
 
+
+
 /////////////////////////////////////////////////////////////////////////7
-var dietasUnicas=[]
 
 
  function validate(input) {
@@ -42,17 +43,20 @@ var dietasUnicas=[]
 
 
 
-export default function RecipeCreate(){
+export default function RecipeUpdate(){
 
-	const dispatch=useDispatch()
-	const dietTypes = useSelector((state) => state.diets)
+    const dispatch=useDispatch()
+    const dietTypes = useSelector((state) => state.diets)
     const allRecipes= useSelector ((state) => state.recipes)
     const navigate = useNavigate();// esto es un metodo del router que me redirige a la ruta que yo le diga
+
+    const details= useSelector(state => state.detail)
+  	const { id } = useParams();
+
 
     const [errors, setErrors] = useState({});
     const [terminos, setTerminos]=useState("")
 
-  let arrayDiets=[] 
  	const[input, setInput] = useState({
 		name:"",
     image:"",
@@ -60,10 +64,12 @@ export default function RecipeCreate(){
 		healthScore:"",
     steps:"",
 		diets:[],
+        id:id
 	})
  
 	useEffect(() => {
 		dispatch(getDiets())
+    dispatch(getDetail(id));
 	},[]);
 
 
@@ -83,18 +89,20 @@ export default function RecipeCreate(){
 
     function handleSubmit(e) {
         e.preventDefault();
-        dispatch(postRecipe(input))
-        alert("Receta creada")
+        dispatch(UpdateRecipe(input, id))
+        dispatch(limpiarRecetas())
         dispatch(getRecipes())
-        setInput({
+        dispatch(getDetail())
+        alert("Actualizada")
+         setInput({
           name:"",
           image:"",
           summary:"",
           healthScore:"",
           steps:"",
           diets:[],
-        })
-         navigate('/home');
+        }) 
+      navigate('/home'); 
     }
 
      function handleCheckBox(e) {
@@ -110,12 +118,26 @@ export default function RecipeCreate(){
 	return(	
 		<div className={styles.Contenedor}>      
           <div className={styles.DivBoton}>
-          {<Link to= '/home'><button className={styles.botonVolver}>Volver</button></Link>}
+          {<Link to= '/home'><button className={styles.botonVolver}>Volver a Home</button></Link>}
+          {<Link to= {'/home/'+ id}><button className={styles.botonVolver}>Volver a detalles</button></Link>}
         </div>
         <div className={styles.divTitulo}>
-            <h1>Crea tu Receta</h1>
+            <h1>Actualizar Receta: {details.name}</h1>
         </div>
 		    <form onSubmit = {(e) => handleSubmit(e)} className={styles.formulario}> 
+
+            <div className={styles.estiloDiv}>
+                            <div>  
+                                <input className={styles.estiloInputdisabled}
+                                type="text"	
+                                value={input.id}		    	
+                                name="id"
+                                onChange={(e) => handleChange(e)}
+                                disabled
+                                />
+                            </div>
+
+                    </div>
 
                     <div className={styles.estiloDiv}>
                             <div className={styles.estiloLabel}><label>Name:</label></div>
@@ -185,36 +207,17 @@ export default function RecipeCreate(){
                 {errors.steps && <p className={styles.estiloError}>*{errors.steps}</p>}
                 <div className={styles.estiloDivUltimo}>
                   
-                <div className={styles.estiloLabelTipos}><label>Tipos de dietas: </label></div>
-                  <div className={styles.contenedorDiets}>
-                    
-                        <div className={styles.primeras4Diets}>
-                            <label for="lacto ovo vegetarian" className={styles.labelTypeDiet}><input type="checkbox" value="lacto ovo vegetarian"  name="lacto ovo vegetarian" onChange={(e) =>  handleCheckBox(e)} className={styles.inputStyle}/>lacto ovo vegetarian</label>
-                            <label for="fodmap friendly" className={styles.labelTypeDiet}><input type="checkbox" value="fodmap friendlyn"  name="fodmap friendly" onChange={(e) =>  handleCheckBox(e)}/>fodmap friendly</label>
-                            <label for="gluten free" className={styles.labelTypeDiet}><input type="checkbox" value="gluten free"  name="gluten free" onChange={(e) =>  handleCheckBox(e)}/>gluten free</label>
-                            <label for="dairy free" className={styles.labelTypeDiet}><input type="checkbox" value="dairy free"  name="dairy free" onChange={(e) =>  handleCheckBox(e)}/>dairy free</label>               
-                        </div>
-                        <div className={styles.segundas4Diets}> 
-                          <label for="paleolithic" className={styles.labelTypeDiet}><input type="checkbox" value="paleolithic"  name="paleolithic" onChange={(e) =>  handleCheckBox(e)}/>paleolithic</label>             
-                            <label for="vegan" className={styles.labelTypeDiet}><input type="checkbox" value="vegan"  name="vegan" onChange={(e) =>  handleCheckBox(e)}/>vegan</label>
-                            <label for="primal" className={styles.labelTypeDiet}><input type="checkbox" value="primal"  name="primal" onChange={(e) =>  handleCheckBox(e)}/>primal</label>                
-                            <label for="whole 30" className={styles.labelTypeDiet}><input type="checkbox" value="whole 30"  name="whole 30" onChange={(e) =>  handleCheckBox(e)}/>whole 30</label>
-                        </div>
-                        <div className={styles.ultimas3Diets}>           
-                            <label for="pescatarian" className={styles.labelTypeDiet}><input type="checkbox" value="pescatarian"  name="pescatarian" onChange={(e) =>  handleCheckBox(e)}/>pescatarian</label>
-                            <label for="ketogenic" className={styles.labelTypeDiet}><input type="checkbox" value="ketogenic"  name="ketogenic" onChange={(e) =>  handleCheckBox(e)}/>ketogenic</label>
-                            <label for="vegetarian" className={styles.labelTypeDiet}><input type="checkbox" value="vegetarian"  name="vegetarian" onChange={(e) =>  handleCheckBox(e)}/>vegetarian</label>
-                        </div>
-                  </div>
-                          
+                <div className={styles.estiloLabelTipos}><label>Tipos de dietas: </label></div>                          
+                         
+                            {details.diets?.map((dieta)=> <p className={styles.estiloP}>• {dieta}</p>)}
 
-                  </div>
+
+                </div>
 
                 <div>
-{input.diets.length==0 ? (<p className={styles.estiloError}>*Debe agregar al menos una dieta{errors.diets}</p>) : null}
+
             
                               {
-            input.diets.length === 0 ||
             errors.name ||
             errors.image ||
             errors.summary ||
@@ -227,11 +230,11 @@ export default function RecipeCreate(){
             !input.steps ?
               (
               <button className={styles.buttonSubmitDisabled}  type="submit" disabled={true}>
-                Crear Receta
+                Actualizar Receta
               </button>
             ) : (
               <button className={styles.buttonSubmit} type="submit">
-                Crear Receta
+                Actualizar Receta
               </button>
             )}
                 </div>
@@ -239,9 +242,6 @@ export default function RecipeCreate(){
 		    </form>
           <div className={styles.estiloDivdiets}>
             </div>
-
-
-
         </div>
 		
 	)

@@ -3,12 +3,22 @@ const initialState = {
 	allRecipes: [],
 	detail:[],
 	diets:[],
-	healthScore:""
+	healthScore:"",
+	idActualizar:""
 
 }
 
 function rootReducer(state=initialState, action) {
 	switch(action.type) {
+
+
+		case 'LIMPIAR_RECETAS':
+			console.log("limpiar reducer")
+			return {
+				...state,
+				recipes:[]
+			}
+
 		case 'GET_RECIPES':
 			return{
 				...state,
@@ -73,6 +83,7 @@ function rootReducer(state=initialState, action) {
 			}
 			
 		case 'ORDER_BY_HEALTHSCORE':
+			console.log("order by healthxcore")
       		const HealthScoreOrder =
         	action.payload === "top"
           	? state.recipes.sort(function (a, b) {
@@ -109,6 +120,11 @@ function rootReducer(state=initialState, action) {
 				...state,
 				recipes: action.payload
 			}
+		case 'UPDATE_RECIPE':
+			return {
+				...state,
+			}
+
 			default:
 				return state;
 	}
