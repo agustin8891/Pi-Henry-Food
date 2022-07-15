@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux'
-import {getRecipes, filterDietByType, filterCreated, orderByName, getDiets, orderByHealthScore, filtromayor50} from '../../actions';
+import {getRecipes, filterDietByType, filterCreated, orderByName, getDiets, orderByHealthScore} from '../../actions';
 import styles from './Home.module.css'
 import {Link} from 'react-router-dom'
 import Paginado from '../Paginado/Paginado';
@@ -15,13 +15,13 @@ export default function Home() {
 	const dispatch = useDispatch()
 	const allRecipes = useSelector ((state) => state.recipes)
 
-	const [currentPage, setCurrentPage] = useState(1) // cuando currentPage vale 1 /// 2 
+	const [currentPage, setCurrentPage] = useState(1) 
 	const [recipesPerPage, setrecipesPerPage] = useState(9) 
-	const indexOfLastRecipe=currentPage * recipesPerPage  //  1 * 9 = 9 
-	const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage // 9-9 = 0
+	const indexOfLastRecipe=currentPage * recipesPerPage  
+	const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage 
 	const dietsTypes = useSelector((state) => state.diets)
 
-	let currentRecipes = allRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe) //slice(0,9) => 9 recetas
+	let currentRecipes = allRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe) 
 	const [orden, setOrden] = useState("")
 	const [count, setCount] = useState(0);
 
@@ -35,8 +35,6 @@ export default function Home() {
 		dispatch(getDiets())			
 		if(allRecipes.length===0) dispatch(getRecipes())	
 	},[dispatch])	
-
-
 
 	
 	const paginado = (pageNumber) => {
@@ -85,12 +83,6 @@ export default function Home() {
 		selectselectOrderHealthScores.value = "Seleccionar";
 		setCount(count + 1); 
 	};
-
-
-
-
-
-
 
 
 	  function handleOrderHealthScore(e) {
@@ -151,7 +143,7 @@ export default function Home() {
 {								<select id="selectFilterType"
 									onChange={e => handleFilterType(e)} className={styles.abcClase}>
 								<option value="Seleccionar" selected="true" disabled="disabled">Seleccionar</option>
-									<option value="All">Todos</option>
+									<option value="All">Todas</option>
 									<option value="gluten free">Gluten Free</option>
 									<option value="dairy free">Dairy Free</option>
 									<option value= "lacto ovo vegetarian">Lacto Ovo Vegetarian</option>
@@ -172,8 +164,8 @@ export default function Home() {
 								<select  id="selectFilterCreated"
 									onChange={e => handleFilterCreated(e)}>
 								<option value="Seleccionar" selected="true" disabled="disabled">Seleccionar</option>
-									<option value='All'>Todos</option>
-									<option value='created'>Creados</option>
+									<option value='All'>Todas</option>
+									<option value='created'>Creadas</option>
 									<option value='api'>Existentes</option>
 								</select>
 								<i></i>

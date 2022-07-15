@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Link, useHistory, useParams} from 'react-router-dom';
-import {postRecipe, getDiets, getRecipes, UpdateRecipe,limpiarRecetas, getDetail} from '../../actions/index'
+import {getDiets, getRecipes, UpdateRecipe,limpiarRecetas, getDetail} from '../../actions/index'
 import {useDispatch, useSelector} from 'react-redux';
 import styles from './Actualizar.module.css'
 import { useNavigate } from 'react-router-dom';
@@ -48,7 +48,7 @@ export default function RecipeUpdate(){
     const dispatch=useDispatch()
     const dietTypes = useSelector((state) => state.diets)
     const allRecipes= useSelector ((state) => state.recipes)
-    const navigate = useNavigate();// esto es un metodo del router que me redirige a la ruta que yo le diga
+    const navigate = useNavigate();
 
     const details= useSelector(state => state.detail)
   	const { id } = useParams();
@@ -93,7 +93,7 @@ export default function RecipeUpdate(){
         dispatch(limpiarRecetas())
         dispatch(getRecipes())
         dispatch(getDetail())
-        alert("Actualizada")
+        alert("Receta Actualizada")
          setInput({
           name:"",
           image:"",
@@ -105,15 +105,6 @@ export default function RecipeUpdate(){
       navigate('/home'); 
     }
 
-     function handleCheckBox(e) {
-      if(e.target.checked===true) {  
-        setInput({ ...input, diets: [...input.diets, e.target.name] });
-      } else if(e.target.checked===false) { 
-      setInput({...input, diets: input.diets.filter(diet => diet !==e.target.name)
-    })
-    }
-    console.log(input.diets)
-      }
   
 	return(	
 		<div className={styles.Contenedor}>      

@@ -10,8 +10,6 @@ const initialState = {
 
 function rootReducer(state=initialState, action) {
 	switch(action.type) {
-
-
 		case 'LIMPIAR_RECETAS':
 			console.log("limpiar reducer")
 			return {
@@ -35,11 +33,9 @@ function rootReducer(state=initialState, action) {
 		case 'FILTER_BY_TYPE' : 
 			let allRecipesStatus = state.allRecipes
 			let statusFiltered=action.payload==='All' ? allRecipesStatus : allRecipesStatus.filter(el => el.diets.includes(action.payload))
-
 			return {
 				...state,
 				recipes: statusFiltered,
-
 		}
 
 		case 'FILTER_CREATED':
@@ -75,8 +71,6 @@ function rootReducer(state=initialState, action) {
 				}
 				return 0;
 			})
-
-
 			return {
 				...state,
 				recipes: sortedArr

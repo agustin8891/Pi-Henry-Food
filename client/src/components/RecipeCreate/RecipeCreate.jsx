@@ -9,8 +9,6 @@ import { useNavigate } from 'react-router-dom';
 
 
 /////////////////////////////////////////////////////////////////////////7
-var dietasUnicas=[]
-
 
  function validate(input) {
     let errors = {}; 
@@ -47,12 +45,12 @@ export default function RecipeCreate(){
 	const dispatch=useDispatch()
 	const dietTypes = useSelector((state) => state.diets)
     const allRecipes= useSelector ((state) => state.recipes)
-    const navigate = useNavigate();// esto es un metodo del router que me redirige a la ruta que yo le diga
+    const navigate = useNavigate();
 
     const [errors, setErrors] = useState({});
     const [terminos, setTerminos]=useState("")
 
-  let arrayDiets=[] 
+
  	const[input, setInput] = useState({
 		name:"",
     image:"",
@@ -211,7 +209,7 @@ export default function RecipeCreate(){
                   </div>
 
                 <div>
-{input.diets.length==0 ? (<p className={styles.estiloError}>*Debe agregar al menos una dieta{errors.diets}</p>) : null}
+                {input.diets.length==0 ? (<p className={styles.estiloError}>*Debe agregar al menos una dieta{errors.diets}</p>) : null}
             
                               {
             input.diets.length === 0 ||
@@ -239,8 +237,6 @@ export default function RecipeCreate(){
 		    </form>
           <div className={styles.estiloDivdiets}>
             </div>
-
-
 
         </div>
 		

@@ -31,7 +31,7 @@ function EliminarRecipe(){
 		dispatch(deleteRecipe(id));
 		dispatch(limpiarRecetas());
 		dispatch(getDetail())
-		alert("receta eliminada")	
+		alert("Receta eliminada")	
 		dispatch(getRecipes())
 		navigate('/home');
 		return true;
@@ -40,7 +40,6 @@ function EliminarRecipe(){
 	}
 
 }
-
 
 	return (
 		<div >								
@@ -95,11 +94,12 @@ function EliminarRecipe(){
 										</div>
 								</div>
 							</div>
+							
 						</div> : <p>Loading...</p>
 					}
 					{myRecipe.createdInDb ? 
 
-						<div>
+						<div className={styles.botonsDiv}>
 								<div>
 									<Link to ='/home'>
 										<button className={styles.botonDetail} onClick={() => reset()}>Volver a Home</button>
@@ -107,7 +107,7 @@ function EliminarRecipe(){
 								</div>
 								<button className={styles.botonDetail} onClick={() => EliminarRecipe()}>Eliminar Receta</button>
 								<Link to ={'/actualizar/' + id}>
-								<button className={styles.botonDetail}>ActualizarReceta</button>  
+								<button className={styles.botonDetail}>Actualizar Receta</button>  
 								</Link> 
 						</div>
 
@@ -117,8 +117,6 @@ function EliminarRecipe(){
 							<Link to ='/home'>
 								<button className={styles.botonDetail} onClick={() => reset()}>Volver a Home</button>
 							</Link> 
-
-							<p className={styles.textBotones}>Esta receta proviene de la API por lo que no se puede actualizar ni Borrar</p> 
 
 						</div>
 

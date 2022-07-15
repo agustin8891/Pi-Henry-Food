@@ -135,7 +135,7 @@ router.get('/:id', async (req,res) => {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-//////77API
+//77API
 // const getApiInfo = async() => {  
 // 	console.log("getApiInfo")
 // 	const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_PASSWORD}&number=100&addRecipeInformation=true`)
@@ -145,7 +145,7 @@ router.get('/:id', async (req,res) => {
 // 			id: el.id,
 //             name: el.title,
 //             healthScore:el.healthScore,
-//             summary: el.summary,
+//             summary: el.summary.replace( /(<([^>]+)>)/ig, ''),
 //             diets: el.diets,
 //             steps: el.analyzedInstructions.length>0 ? (el.analyzedInstructions[0].steps.map (st => st.step)) : (null), 
 //             image: el.image,
@@ -156,7 +156,7 @@ router.get('/:id', async (req,res) => {
   
 // }
 
-// ////////////////////API
+////////////////////API
 
 // router.get('/', async (req,res) => {
 // 	const name= req.query.name
@@ -239,7 +239,7 @@ router.get('/:id', async (req,res) => {
 // 				  		id: apiUrl.data.id,
 // 					  	name: apiUrl.data.title,
 // 				  		healthScore:apiUrl.data.healthScore,
-// 					  	summary: apiUrl.data.summary,
+// 					  	summary: apiUrl.data.summary.replace( /(<([^>]+)>)/ig, ''),
 // 				  		diets: apiUrl.data.diets,
 // 					  	steps: apiUrl.data.analyzedInstructions.length>0 ? (apiUrl.data.analyzedInstructions[0].steps.map (st => st.step)) : (null), 
 // 				  		image: apiUrl.data.image,

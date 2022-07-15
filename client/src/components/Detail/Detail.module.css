@@ -183,7 +183,7 @@ display:flex;
 .botonDetail{
     padding:0px;
     margin:center;
-    width: 536px;
+    width: 500px;
     height: 43px;
     cursor: pointer;
     background-color: #aaa8a8 ;
@@ -207,13 +207,10 @@ display:flex;
    
   }   
 
-  .divBotones{
-    display:flex;
-    margin-left:80px;
-    width:800px;
-  }
+.botonsDiv{
+    margin-left:-180px;
+}
 
-  .textBotones{
-
-    color:red;
-  }
+ .divBotones{
+    margin-left:-280px;
+ }
