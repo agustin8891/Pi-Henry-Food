@@ -42,7 +42,7 @@ function EliminarRecipe(){
 }
 
 	return (
-		<div >								
+		<div className={styles.detailContainerAll}>								
 					{
 							myRecipe.hasOwnProperty('diets') ?
 						<div className={styles.detailClass}>
