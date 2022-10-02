@@ -2,6 +2,9 @@ body{
     background-color:rgb(194, 187, 95);
 }
 
+
+@media(max-width:990px){
+    
 .divBuscar{
     display:flex;
     flex-direction:column;
@@ -58,3 +61,188 @@ background-color:#aaa8a8;
 .labelBuscarRecetas{
     margin-left:46px;
   }
+.divBuscar{
+    display:flex;
+    flex-direction:column;
+    width:268px;
+    margin-right:0px;
+    margin-left:0px;
+    padding-top:7px;
+
+}
+
+
+
+.buscarClase{
+    width:167px;
+    height: 28px;
+    margin-top:20px;
+    border:2px solid rgba(0,0,0,0.2);
+border-radius: 12px;
+font-family:ericma;
+text-decoration: none;
+font-weight: bold;
+border-style: solid;
+font-size: 20px;
+color: #2a2a2a;
+background-color:#aaa8a8;
+
+}
+
+.botonBuscar{
+    padding:0px;
+    margin-top: 13px;
+    margin-left:0px;
+    width: 180px;
+    height: 40px;
+  cursor: pointer;
+  background-color: #aaa8a8;     
+  position:relative;
+  display:inline-block;
+  padding:0px;
+  border-color: #2a2a2a;
+  border-radius: 15px;
+  font-family:ericma;
+  color: #2a2a2a;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  border-style: solid;
+   }
+  
+   .botonBuscar:hover{
+    background-color: #ffac46;   
+   }
+
+/* .labelBuscarRecetas{
+    margin-left:46px;
+  } */
+
+}
+@media(max-width:991px){
+            .containerBuscarAll{
+                margin-top:300px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+            .divBuscar{
+                display:flex;
+                flex-direction:column; 
+                width:268px;
+                margin-right:0px;
+                margin-left:0px;
+                padding-top:10.5px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+
+            }
+
+
+
+            .buscarClase{
+                width:167px;
+                height: 28px;
+                margin-top:20px;
+                border:2px solid rgba(0,0,0,0.2);
+            border-radius: 12px;
+            font-family:ericma;
+            text-decoration: none;
+            font-weight: bold;
+            border-style: solid;
+            font-size: 20px;
+            color: #2a2a2a;
+            background-color:#aaa8a8;
+            
+
+            }
+
+            .botonBuscar{
+                padding:0px;
+                margin-top: 13px;
+                margin-left:0px;
+                width: 180px;
+                height: 40px;
+            cursor: pointer;
+            background-color: #aaa8a8;     
+            position:relative;
+            display:inline-block;
+            padding:0px;
+            border-color: #2a2a2a;
+            border-radius: 15px;
+            font-family:ericma;
+            color: #2a2a2a;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+            border-style: solid;
+            }
+            
+            .botonBuscar:hover{
+                background-color: #ffac46;   
+            }
+
+            .labelBuscarRecetas{
+                margin-left:4px;
+  }
+}
+@media(min-width:1500px){
+    
+                                                .divBuscar{
+                                                    display:flex;
+                                                    flex-direction:column;
+                                                    width:402px;
+                                                    margin-right:0px;
+                                                    margin-left:0px;
+                                                    padding-top:10.5px;
+
+                                                }
+
+
+
+                                                .buscarClase{
+                                                    width:250px;
+                                                    height: 42px;
+                                                    margin-top:30px;
+                                                    border:2px solid rgba(0,0,0,0.2);
+                                                border-radius: 18px;
+                                                font-family:ericma;
+                                                text-decoration: none;
+                                                font-weight: bold;
+                                                border-style: solid;
+                                                font-size: 30px;
+                                                color: #2a2a2a;
+                                                background-color:#aaa8a8;
+
+                                                }
+
+                                                .botonBuscar{
+                                                    padding:0px;
+                                                    margin-top: 19.5px;
+                                                    margin-left:0px;
+                                                    width: 270px;
+                                                    height: 60px;
+                                                cursor: pointer;
+                                                background-color: #aaa8a8;     
+                                                position:relative;
+                                                display:inline-block;
+                                                padding:0px;
+                                                border-color: #2a2a2a;
+                                                border-radius: 22.5px;
+                                                font-family:ericma;
+                                                color: #2a2a2a;
+                                                font-size: 27px;
+                                                text-decoration: none;
+                                                font-weight: bold;
+                                                border-style: solid;
+                                                }
+                                                
+                                                .botonBuscar:hover{
+                                                    background-color: #ffac46;   
+                                                }
+
+                                                .labelBuscarRecetas{
+                                                    margin-left:69px;
+                                                }
+}

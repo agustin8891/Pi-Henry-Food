@@ -25,7 +25,7 @@ async function handleSubmit(e) {
 }
 
 return (
-	<div> {
+	<div className={styles.containerBuscarAll}> {
 			<div className={styles.divBuscar}> 
 				<label className={styles.labelBuscarRecetas}>Buscar Recetas:</label>
 				<div>

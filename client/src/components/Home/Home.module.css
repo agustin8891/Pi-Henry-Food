@@ -2,40 +2,798 @@ body{
     background-color: #2a2a2a;
 }
 
+@media(min-width:1280px){
+  .padreTop{
+    font-size: 27px;
+  }
+  .LinkClase{
+    padding-top:20px;
+    width:200px;
+    margin:3px;
+    margin-top:7px;
+    font-size: 27px;
+  }
+  .filtrosyPaginado {
+    font-size:5px;
+    width:804px;
+    margin-top:20px;
+    height:167px;
+  }
+  a{
+    font-size:20px; 
+  }
+  nav{
+    height:50px;
+  }
+
+
+    li{
+      border-radius: 2px;
+      width: 27px;
+      height: 27px;
+      margin: 4px;
+    }
+
+    .padreDeFiltros {
+      font-size:22px;
+      width:804px; 
+    }
+
+
+    .HealthClass{
+      margin:2px;
+      font-size:12px;
+      padding-top:20px;
+
+      
+    }
+
+    .TypeClass {
+      margin:2px;
+      font-size:12px;
+      padding: 7px 10px;
+    
+    }
+
+
+    .abcClase {
+      font-size:18px;
+      padding-top:20px;
+    }
+
+    .tipoClase { 
+      font-size:18px;
+      padding-top:20px;
+
+      }
+
+    .creadosClase{
+      margin:2px;
+      font-size:18px;
+      padding-top:20px;
+    }
+
+    .LabelPagina{
+      font-size:20px !important;
+      margin-top:25px;
+    }
+    
+    .paginadoClase{
+      font-size:12px;
+      margin:0px;
+      height:53px;
+      margin-top:50px;
+      margin-left:-134px;    
+      
+    }
+    
+    .paginasClase{
+      margin-top:0px;
+      padding:0px;
+    
+    
+    }
+    
+    
+    .searchBarClase{
+      font-size:5px;
+    }
+    
+    .padreDeCards{
+    
+        gap:13px;
+       width: 2010px;
+       margin-left: -60px;
+       margin-top:50px;
+    
+    }
+    
+    
+    .boton{
+      padding:0px;
+      width: 134px;
+      height: 43px;
+      padding-top:0px;
+      border-radius: 15px;
+      font-size: 18px;
+      margin-top:-5px;
+     }
+    
+    .LoadingClass{
+      font-size:30px;
+    }
+    
+    
+    .padreDeCards > fragment {
+        width: 335px;
+        margin-left:60px;
+        margin-top:30px;   
+    }  
+
+  
+    
+
+    
+    
+
+    .HealthClass{
+      max-width: 167px;
+      position: relative;
+    }
+     
+    .HealthClass select{
+      width: 134px;
+        padding: 7px 10px;
+        height: 42px;
+        outline: 0; 
+        border: 0;
+      border-radius: 0;
+      font-size: 1em;    
+        border-radius: 12px;
+        position: relative;
+    }  
+     
+    
+    .HealthClass i{
+      position: absolute;
+      right: 20px;
+      top: calc(50% + 5px);
+      width: 10px;
+      height: 10px;
+      display: block;
+      border-left:4px solid #2a2a2a;
+      border-bottom:4px solid #2a2a2a;
+      transform: rotate(-45deg); 
+      transition: all 0.25s ease;
+    }
+     
+    .HealthClass:hover i{
+      margin-top: 3px;
+    
+    
+    }
+    
+    
+    select:hover {
+      background-color:#ffac46; 
+      cursor: pointer;
+      
+    }
+    
+    option {
+      background-color:#ffac46; 
+      cursor: pointer; 
+    }
+     
+    option:hover {
+      background-color:red;  
+      cursor: pointer;
+    }
+    
+
+}
+
+@media(max-width:991px){
+                .HenryFood{
+                  margin:center;
+                }
+                .containerAll{
+                  display:flex;
+                  flex-direction:column;
+                }
+                .padreTop{
+                  font-size: 40px;
+                  display:flex;
+                  flex-direction:column;
+                }
+                .LinkClase{
+                  padding-top:30px;
+                  width:375px;
+                  margin:4.5px;
+                  margin-top:10.5px;
+                  font-size: 40px;
+                  display:flex;
+
+                }
+                .filtrosyPaginado {
+                  font-size:7.5px;
+                  width:375px;
+                  margin-top:30px;
+                  height:250px;
+                  display:flex;
+                  flex-direction:column;
+
+                }
+                .classLabel {
+                  font-size:18px;
+                  min-width:230px;
+                }
+
+                .HealthClass{
+                  margin:2px;
+                  font-size:18px;
+                  padding-top:10px;
+                
+                  
+                }
+                a{
+                  font-size:30px; 
+              }
+              nav{
+                height:75px;
+              }
+
+
+              li{
+                border-radius: 3.5px;
+                width: 40px;
+                height: 40px;
+                margin: 5.5px;
+              }
+
+              .padreDeFiltros {
+                font-size:33px;
+                width:375px; 
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+              }
+              /* .HealthClass{
+                margin:2px;
+                font-size:12px;
+                padding-top:20px;
+
+                
+              } */
+
+              /* .HealthClass{
+                margin:3.5px;
+                font-size:18px;
+                padding-top:30px;
+
+                
+              } */
+
+              .TypeClass {
+                margin:3.5px;
+                font-size:18px;
+                padding: 10.5px 15px;
+
+              }
+
+
+              .abcClase {
+                font-size:27px;
+                padding-top:25px;
+              }
+
+              .tipoClase { 
+                font-size:27px;
+                padding-top:25px;
+
+                }
+
+              .creadosClase{
+                margin:3.5px;
+                font-size:27px;
+                padding-top:25px;
+              }
+              .LabelPagina{
+                font-size:25px !important;
+                margin-top:37.5px;
+              }
+
+              .paginadoClase{
+                font-size:18px;
+                margin:0px;
+                 margin-top:75px;
+                margin-left:-201px;    
+                width:375;
+                
+              }
+
+              .paginasClase{
+                margin-top:0px;
+                padding:0px;
+                min-height:200px;
+
+              }
+
+
+              .searchBarClase{
+                font-size:7.5px;
+              }
+
+              .padreDeCards{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                  gap:19.5px;
+                width: 375px;
+                margin-left: -90px;
+                margin-top:75px;
+
+              }
+
+
+              .boton{
+                padding:0px;
+                width: 201px;
+                height: 64px;
+                padding-top:0px;
+                border-radius: 22.5px;
+                font-size: 27px;
+                margin-top:-7.5px;
+              }
+
+              .LoadingClass{
+                font-size:45px;
+              }
+
+
+              .padreDeCards > fragment {
+                  width: 330px;
+                  margin-left:90px;
+                  margin-top:45px;   
+              }  
+
+                  .HealthClass select{
+                width: 134px;
+                  padding: 7px 10px;
+                  height: 42px;
+                  outline: 0; 
+                  border: 0;
+                border-radius: 0;
+                font-size: 1em;    
+                  border-radius: 12px;
+                  position: relative;
+              } 
+
+
+
+
+
+
+
+              .HealthClass{
+                max-width: 250px;
+                position: relative;
+              }
+
+              /* width: 134px;
+              cursor: pointer;
+                padding: 7px 10px;
+                height: 42px;
+                outline: 0; 
+                border: 0; */
+
+                /*   	padding: 7px 10px;
+                  height: 42px;
+                  outline: 0; 
+                  border: 0;
+                border-radius: 0; */
+              /*  background-color: #aaa8a8;
+                color: #7b7b7b; */
+              /* 	font-size: 1em; */
+
+              .HealthClass select{
+                width: 201px;
+                  padding: 7px 10px;
+                  height: 63px;
+                  outline: 0; 
+                  border: 0;
+                border-radius: 0;
+                font-size: 2em;    
+                  border-radius: 18px;
+                  position: relative;
+              }  
+
+
+              .HealthClass i{
+                position: absolute;
+                right: 10px;
+                top: calc(50% + 7.5px);
+                width: 14px;
+                height: 14px;
+                display: block;
+                border-left:4px solid #2a2a2a;
+                border-bottom:4px solid #2a2a2a;
+                transform: rotate(-45deg); 
+                transition: all 0.25s ease;
+              }
+
+              .HealthClass:hover i{
+                margin-top: 4.5px;
+
+
+              }
+
+              .HealthClass{
+                margin:2px;
+                font-size:12px;
+                padding-top:10px;
+
+                
+              }
+              select:hover {
+                background-color:#ffac46; 
+                cursor: pointer;
+                
+              }
+
+              option {
+                background-color:#ffac46; 
+                cursor: pointer; 
+              }
+
+              option:hover {
+                background-color:red;  
+                cursor: pointer;
+              }
+
+
+
+              /* borrar a partir de aca */
+
+              .HealthClass i{
+                position: absolute;
+                right: 10px;
+                top: calc(50% + 5px);
+                width: 10px;
+                height: 10px;
+                display: block;
+                border-left:4px solid #2a2a2a;
+                border-bottom:4px solid #2a2a2a;
+                transform: rotate(-45deg); 
+                transition: all 0.25s ease;
+              }
+
+              .HealthClass:hover i{
+                margin-top: 3px;
+
+
+              }
+
+              .HealthClass select{
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+              }
+
+
+              .HealthClass select{
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+              }
+
+              .HealthClass select::-ms-expand {
+                display: none;
+              }
+}
+@media(min-width:1500px){
+                                                          .padreTop{
+                                                            font-size: 40px;
+                                                          }
+                                                          .LinkClase{
+                                                            padding-top:30px;
+                                                            width:300px;
+                                                            margin:4.5px;
+                                                            margin-top:10.5px;
+                                                            font-size: 40px;
+                                                          }
+                                                          .filtrosyPaginado {
+                                                            font-size:7.5px;
+                                                            width:1206px;
+                                                            margin-top:30px;
+                                                            height:250px;
+
+                                                          }
+                                                          .classLabel {
+                                                            font-size:18px;
+                                                            min-width:230px;
+                                                          }
+
+                                                          .HealthClass{
+                                                            margin:2px;
+                                                            font-size:18px;
+                                                            padding-top:10px;
+                                                          
+                                                            
+                                                          }
+                                                          a{
+                                                            font-size:30px; 
+                                                        }
+                                                        nav{
+                                                          height:75px;
+                                                        }
+
+
+                                                        li{
+                                                          border-radius: 3.5px;
+                                                          width: 40px;
+                                                          height: 40px;
+                                                          margin: 5.5px;
+                                                        }
+
+                                                        .padreDeFiltros {
+                                                          font-size:33px;
+                                                          width:1206px; 
+                                                        }
+                                                        /* .HealthClass{
+                                                          margin:2px;
+                                                          font-size:12px;
+                                                          padding-top:20px;
+
+                                                          
+                                                        } */
+
+                                                        /* .HealthClass{
+                                                          margin:3.5px;
+                                                          font-size:18px;
+                                                          padding-top:30px;
+
+                                                          
+                                                        } */
+
+                                                        .TypeClass {
+                                                          margin:3.5px;
+                                                          font-size:18px;
+                                                          padding: 10.5px 15px;
+                                                        
+                                                        }
+
+
+                                                        .abcClase {
+                                                          font-size:27px;
+                                                          padding-top:25px;
+                                                        }
+
+                                                        .tipoClase { 
+                                                          font-size:27px;
+                                                          padding-top:25px;
+
+                                                          }
+
+                                                        .creadosClase{
+                                                          margin:3.5px;
+                                                          font-size:27px;
+                                                          padding-top:25px;
+                                                        }
+                                                        .LabelPagina{
+                                                          font-size:25px !important;
+                                                          margin-top:37.5px;
+                                                        }
+
+                                                        .paginadoClase{
+                                                          font-size:18px;
+                                                          margin:0px;
+                                                          height:79px;
+                                                          margin-top:75px;
+                                                          margin-left:-201px;    
+                                                          
+                                                        }
+
+                                                        .paginasClase{
+                                                          margin-top:0px;
+                                                          padding:0px;
+
+
+                                                        }
+
+
+                                                        .searchBarClase{
+                                                          font-size:7.5px;
+                                                        }
+
+                                                        .padreDeCards{
+
+                                                            gap:19.5px;
+                                                          width: 2010px;
+                                                          margin-left: -90px;
+                                                          margin-top:75px;
+
+                                                        }
+
+
+                                                        .boton{
+                                                          padding:0px;
+                                                          width: 201px;
+                                                          height: 64px;
+                                                          padding-top:0px;
+                                                          border-radius: 22.5px;
+                                                          font-size: 27px;
+                                                          margin-top:-7.5px;
+                                                        }
+
+                                                        .LoadingClass{
+                                                          font-size:45px;
+                                                        }
+
+
+                                                        .padreDeCards > fragment {
+                                                            width: 502px;
+                                                            margin-left:90px;
+                                                            margin-top:45px;   
+                                                        }  
+
+                                                            .HealthClass select{
+                                                          width: 134px;
+                                                            padding: 7px 10px;
+                                                            height: 42px;
+                                                            outline: 0; 
+                                                            border: 0;
+                                                          border-radius: 0;
+                                                          font-size: 1em;    
+                                                            border-radius: 12px;
+                                                            position: relative;
+                                                        } 
+
+
+
+
+
+
+
+                                                        .HealthClass{
+                                                          max-width: 250px;
+                                                          position: relative;
+                                                        }
+
+                                                        /* width: 134px;
+                                                        cursor: pointer;
+                                                          padding: 7px 10px;
+                                                          height: 42px;
+                                                          outline: 0; 
+                                                          border: 0; */
+
+                                                          /*   	padding: 7px 10px;
+                                                            height: 42px;
+                                                            outline: 0; 
+                                                            border: 0;
+                                                          border-radius: 0; */
+                                                        /*  background-color: #aaa8a8;
+                                                          color: #7b7b7b; */
+                                                        /* 	font-size: 1em; */
+                                                        
+                                                        .HealthClass select{
+                                                          width: 201px;
+                                                            padding: 7px 10px;
+                                                            height: 63px;
+                                                            outline: 0; 
+                                                            border: 0;
+                                                          border-radius: 0;
+                                                          font-size: 2em;    
+                                                            border-radius: 18px;
+                                                            position: relative;
+                                                        }  
+                                                        
+
+                                                        .HealthClass i{
+                                                          position: absolute;
+                                                          right: 10px;
+                                                          top: calc(50% + 7.5px);
+                                                          width: 14px;
+                                                          height: 14px;
+                                                          display: block;
+                                                          border-left:4px solid #2a2a2a;
+                                                          border-bottom:4px solid #2a2a2a;
+                                                          transform: rotate(-45deg); 
+                                                          transition: all 0.25s ease;
+                                                        }
+                                                        
+                                                        .HealthClass:hover i{
+                                                          margin-top: 4.5px;
+
+
+                                                        }
+
+                                                        .HealthClass{
+                                                          margin:2px;
+                                                          font-size:12px;
+                                                          padding-top:10px;
+
+                                                          
+                                                        }
+                                                        select:hover {
+                                                          background-color:#ffac46; 
+                                                          cursor: pointer;
+                                                          
+                                                        }
+
+                                                        option {
+                                                          background-color:#ffac46; 
+                                                          cursor: pointer; 
+                                                        }
+                                                        
+                                                        option:hover {
+                                                          background-color:red;  
+                                                          cursor: pointer;
+                                                        }
+
+
+
+                                                        /* borrar a partir de aca */
+
+                                                        .HealthClass i{
+                                                          position: absolute;
+                                                          right: 10px;
+                                                          top: calc(50% + 5px);
+                                                          width: 10px;
+                                                          height: 10px;
+                                                          display: block;
+                                                          border-left:4px solid #2a2a2a;
+                                                          border-bottom:4px solid #2a2a2a;
+                                                          transform: rotate(-45deg); 
+                                                          transition: all 0.25s ease;
+                                                        }
+                                                        
+                                                        .HealthClass:hover i{
+                                                          margin-top: 3px;
+
+
+                                                        }
+
+                                                        .HealthClass select{
+                                                          appearance: none;
+                                                          -webkit-appearance: none;
+                                                          -moz-appearance: none;
+                                                        }
+
+
+                                                        .HealthClass select{
+                                                          appearance: none;
+                                                          -webkit-appearance: none;
+                                                          -moz-appearance: none;
+                                                        }
+
+                                                        .HealthClass select::-ms-expand {
+                                                          display: none;
+                                                        }
+
+/* borrarde aca para arriba */
+
+}
+
 .padreTop{
   display:flex;
   font-family:ericma;  
   font-weight: bold;
-  font-size: 27px;
   color: #aaa8a8; 
 }
 
 .LinkClase{
- padding-top:20px;
-  width:200px;
-  margin:3px;
-  margin-top:7px;
   display:block;
   color:#ffac46; 
   font-weight: italic;
-  font-size: 27px;
 }
 
 
-
-
-.filtrosyPaginado {
-  font-size:5px;
-  width:804px;
-  margin-top:20px;
-  height:167px;
-}
 
 a{
-   font-size:20px;
   cursor: pointer;
   text-decoration: none;
-
 }
 
 
@@ -43,26 +801,16 @@ a{
 
 
 
-
-nav{
-  height:50px;
-}
 
 
 li{
-  border-radius: 2px;
   display: inline-block;
-  width: 27px;
-  height: 27px;
   background-color: darkgrey;
   color: #2a2a2a;
-  margin: 4px;
   background-color:#aaa8a8
 }
 
 .padreDeFiltros {
-  font-size:22px;
-  width:804px;
   display:flex;
   justify-content: space-around;
   
@@ -70,9 +818,6 @@ li{
 
 
 .HealthClass{
-  margin:2px;
-  font-size:12px;
-  padding-top:20px;
   display:flex;
   flex-direction:column;
  
@@ -80,10 +825,6 @@ li{
 }
 
 .TypeClass {
-  margin:2px;
-  font-size:12px;
-  padding: 7px 10px;
-
   display:flex;
   flex-direction:column;
   
@@ -91,24 +832,16 @@ li{
 
 
 .abcClase {
-/*   justify-content: space-between; */
-  font-size:18px;
-  padding-top:20px;
   display:flex;
   flex-direction:column;
 }
 
 .tipoClase { 
-  font-size:18px;
-  padding-top:20px;
   display:flex;
   flex-direction:column;
   }
 
 .creadosClase{
-  margin:2px;
-  font-size:18px;
-  padding-top:20px;
     display:flex;
   flex-direction:column;
 
@@ -148,7 +881,7 @@ li{
 
     gap:13px;
    display:flex;
-   width: 1340px;
+/*    width: 1340px; */
    margin-left: -60px;
    margin-top:50px;
    flex-wrap: wrap;
@@ -162,17 +895,17 @@ li{
 .boton{
   padding:0px;
   margin:center;
-  width: 134px;
-  height: 43px;
+/*   width: 134px;
+  height: 43px; */
   cursor: pointer;
   background-color: #aaa8a8 ;
   position:relative;
   display:inline-block;
   padding-top:0px;
   border-color: #2a2a2a;
-  border-radius: 15px;
+/*   border-radius: 15px; */
   color: #2a2a2a;
-  font-size: 18px;
+/*   font-size: 18px; */
   font-family:ericma;
   text-decoration: none;
   font-weight: bold;
@@ -192,11 +925,11 @@ li{
 
 
 .padreDeCards > fragment {
-    width: 335px;
+    /* width: 335px; */
 /*     height:470px; */
     text-align: center;
-    margin-left:60px;
-    margin-top:30px;   
+/*     margin-left:60px;
+    margin-top:30px;    */
     border:1px solid #ccc;  
     box-shadow: 2px 2px 2px 2px #ccc;
     background-color:#aaa8a8  ;
@@ -237,20 +970,19 @@ fragment{
  
 .HealthClass select{
 	display: inline-block;
-	width: 134px;
 	cursor: pointer;
-  	padding: 7px 10px;
+/*   	padding: 7px 10px;
   	height: 42px;
   	outline: 0; 
   	border: 0;
-	border-radius: 0;
+	border-radius: 0; */
   background-color: #aaa8a8;
 	color: #7b7b7b;
-	font-size: 1em;
+/* 	font-size: 1em; */
 	color: #2a2a2a;
 
 	border:2px solid rgba(0,0,0,0.2);
-    border-radius: 12px;
+/*     border-radius: 18px; */
     position: relative;
     transition: all 0.25s ease;
     font-family:ericma;
@@ -272,10 +1004,9 @@ option{
 
 .HealthClass i{
 	position: absolute;
-	right: 20px;
 	top: calc(50% + 5px);
-	width: 10px;
-	height: 10px;
+/* 	width: 10px;
+	height: 10px; */
 	display: block;
 	border-left:4px solid #2a2a2a;
 	border-bottom:4px solid #2a2a2a;
@@ -288,11 +1019,6 @@ option{
 
 
 }
-
-/* .HealthClassSelect {
-  background-color:green;
-} */
-
 
 
 select:hover {
@@ -310,20 +1036,3 @@ option:hover {
   background-color:red;  
   cursor: pointer;
 }
-
-/* .optionStyle {
-  background-color:red;
-  box-shadow:0px 0px 10px 100px inset green !important;
-}
-
-.optionStyle:hover {
-  background-color:yellow !important;
-} */
-
-
-
-
-/* option:hover {
-  background-color: yellow;
-}
- */

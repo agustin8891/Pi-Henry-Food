@@ -100,7 +100,7 @@ export default function Home() {
 
 	
 	return (
-		<div>
+		<div className={styles.containerAll}>
 
 			<div className={styles.padreTop}>
 				<div className={styles.LinkClase}>
@@ -116,7 +116,7 @@ export default function Home() {
 						<div className={styles.padreDeFiltros}>
 							
 							<div className={styles.HealthClass}>
-								<label>Ordenar por HealthScore:</label>
+								<label className={styles.classLabel}>Ordenar por HealthScore:</label>
 								<select id="selectOrderHealthScore"
 									onChange={(e) => handleOrderHealthScore(e)}
 									>
@@ -128,7 +128,7 @@ export default function Home() {
 							</div>
 
 							<div className={styles.HealthClass}>
-								<label>Ordenar alfabéticamente:</label>
+								<label className={styles.classLabel}>Ordenar alfabéticamente:</label>
 									<select id="selectSort" className={styles.HealthClassSelect} 
 									onChange={e => handleSort(e)}>
 										<option value="Seleccionar" selected="true" disabled="disabled">Seleccionar</option>
@@ -139,7 +139,7 @@ export default function Home() {
 							</div>
 
 							<div className={styles.HealthClass}>
-							<label>Filtrar por tipo de dieta:</label>
+							<label className={styles.classLabel}>Filtrar por tipo de dieta:</label>
 {								<select id="selectFilterType"
 									onChange={e => handleFilterType(e)} className={styles.abcClase}>
 								<option value="Seleccionar" selected="true" disabled="disabled">Seleccionar</option>
@@ -160,7 +160,7 @@ export default function Home() {
 							</div>
 
 							<div className={styles.HealthClass}>
-								<label>Filtar por creada o existente:</label>
+								<label className={styles.classLabel}>Filtar por creada o existente:</label>
 								<select  id="selectFilterCreated"
 									onChange={e => handleFilterCreated(e)}>
 								<option value="Seleccionar" selected="true" disabled="disabled">Seleccionar</option>

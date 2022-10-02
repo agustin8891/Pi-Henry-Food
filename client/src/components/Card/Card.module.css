@@ -2,50 +2,155 @@ body{
     background-color: #2a2a2a;
 }
 
-.cardStyleName{
-    font-size:16px;
-    color:#2a2a2a;   
-    font-family:ericma;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top:-15px;
-    margin-bottom:10px;
-}
-
-.cardStyletype {
-    font-size:16px;
-    color:#2a2a2a;   
-}
-
-.cardhealthScore{
-    font-size:16px;
-    color:#2a2a2a;   
-}
-
-.cardStyletitle{
-    font-size:22px;
-    color:#2a2a2a;   
-    font-family:ericma;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.cardStylenombreReceta{
-    font-size:16px;
-    color:#2a2a2a;  
+@media(max-width:990px){
+    .cardStyleName{
+        font-size:16px;
+        color:#2a2a2a;   
+        font-family:ericma;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top:-15px;
+        margin-bottom:10px;
+    }
     
+    .cardStyletype {
+        font-size:16px;
+        color:#2a2a2a;   
+    }
+    
+    .cardhealthScore{
+        font-size:16px;
+        color:#2a2a2a;   
+    }
+    
+    .cardStyletitle{
+        font-size:22px;
+        color:#2a2a2a;   
+        font-family:ericma;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .cardStylenombreReceta{
+        font-size:16px;
+        color:#2a2a2a;  
+        
+    }
+    
+    
+    .tipoDietaEstiloDiv {
+        color:#2a2a2a;
+        text-align:left;
+        margin-left:70px;
+    
+    }
+    .tipoDietaEstilo{
+        display:flex;
+        flex-direction:column;
+        color:#2a2a2a;
+        margin-bottom:10px;
+    }
+}
+
+@media(max-width:990px){
+            .cardStyleName{
+                font-size:16px;
+                color:#2a2a2a;   
+                font-family:ericma;
+                text-decoration: none;
+                font-weight: bold;
+                margin-top:-15px;
+                margin-bottom:10px;
+            }
+            
+            .cardStyletype {
+                font-size:16px;
+                color:#2a2a2a;   
+            }
+            
+            .cardhealthScore{
+                font-size:16px;
+                color:#2a2a2a;   
+            }
+            
+            .cardStyletitle{
+                font-size:22px;
+                color:#2a2a2a;   
+                font-family:ericma;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            
+            .cardStylenombreReceta{
+                font-size:16px;
+                color:#2a2a2a;  
+                
+            }
+            
+            
+            .tipoDietaEstiloDiv {
+                color:#2a2a2a;
+                text-align:left;
+                margin-left:70px;
+            
+            }
+            .tipoDietaEstilo{
+                display:flex;
+                flex-direction:column;
+                color:#2a2a2a;
+                margin-bottom:10px;
+            }
 }
 
 
-.tipoDietaEstiloDiv {
-    color:#2a2a2a;
-    text-align:left;
-    margin-left:70px;
+@media(min-width:1500px){
+                                    .cardStyleName{
+                                        font-size:24px;
+                                        color:#2a2a2a;   
+                                        font-family:ericma;
+                                        text-decoration: none;
+                                        font-weight: bold;
+                                        margin-top:-22.5px;
+                                        margin-bottom:15px;
+                                    }
+                                    
+                                    .cardStyletype {
+                                        font-size:24px;
+                                        color:#2a2a2a;   
+                                    }
+                                    
+                                    .cardhealthScore{
+                                        font-size:24px;
+                                        color:#2a2a2a;   
+                                    }
+                                    
+                                    .cardStyletitle{
+                                        font-size:33px;
+                                        color:#2a2a2a;   
+                                        font-family:ericma;
+                                        text-decoration: none;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    .cardStylenombreReceta{
+                                        font-size:24px;
+                                        color:#2a2a2a;  
+                                        
+                                    }
+                                    
+                                    
+                                    .tipoDietaEstiloDiv {
+                                        color:#2a2a2a;
+                                        text-align:left;
+                                        margin-left:105px;
+                                    
+                                    }
+                                    .tipoDietaEstilo{
+                                        display:flex;
+                                        flex-direction:column;
+                                        color:#2a2a2a;
+                                        margin-bottom:15px;
+                                    }
 
 }
-.tipoDietaEstilo{
-    display:flex;
-    flex-direction:column;
-    color:#2a2a2a;
-    margin-bottom:10px;
-}
+
