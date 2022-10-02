@@ -116,7 +116,7 @@ export default function RecipeCreate(){
 		    <form onSubmit = {(e) => handleSubmit(e)} className={styles.formulario}> 
 
                     <div className={styles.estiloDiv}>
-                            <div className={styles.estiloLabel}><label>Name:</label></div>
+                            <div className={styles.estiloLabel}><label className={styles.estiloLabelRecipeCreate}>Name:</label></div>
                             <div>  
                                 <input className={styles.estiloInput}
                                 type="text"	
@@ -131,7 +131,7 @@ export default function RecipeCreate(){
                     </div>
 
                 <div className={styles.estiloDiv}>
-                    <div className={styles.estiloLabel}><label>Image (url):</label></div>
+                    <div className={styles.estiloLabel}><label className={styles.estiloLabelRecipeCreate}>Image (url):</label></div>
                     <div>
                         <input className={styles.estiloInput}
                         type="text"
@@ -144,7 +144,7 @@ export default function RecipeCreate(){
                 </div>
 
 			    <div className={styles.estiloDiv}>
-                    <div className={styles.estiloLabel}><label>Summary:</label></div>
+                    <div className={styles.estiloLabel}><label className={styles.estiloLabelRecipeCreate}>Summary:</label></div>
                     <div>
                         <input className={styles.estiloInput}
                         type="string"
@@ -157,7 +157,7 @@ export default function RecipeCreate(){
                 </div>
 
 			    <div className={styles.estiloDiv}>
-                    <div className={styles.estiloLabel}><label>healthScore:</label></div>
+                    <div className={styles.estiloLabel}><label className={styles.estiloLabelRecipeCreate}>healthScore:</label></div>
                         <div>
                             <input  className={styles.estiloInput}
                             type="number"
@@ -170,7 +170,7 @@ export default function RecipeCreate(){
                 {errors.healthScore && <p className={styles.estiloError}>*{errors.healthScore}</p>}
 
                 <div className={styles.estiloDiv}>
-                    <div className={styles.estiloLabel}><label>Steps:</label></div>
+                    <div className={styles.estiloLabel}><label className={styles.estiloLabelRecipeCreate}>Steps:</label></div>
                     <div>
                         <input className={styles.estiloInput}
                         type="text"
@@ -183,7 +183,7 @@ export default function RecipeCreate(){
                 {errors.steps && <p className={styles.estiloError}>*{errors.steps}</p>}
                 <div className={styles.estiloDivUltimo}>
                   
-                <div className={styles.estiloLabelTipos}><label>Tipos de dietas: </label></div>
+                <div className={styles.estiloLabelTipos}><label className={styles.estiloLabelRecipeCreate}>Tipos de dietas: </label></div>
                   <div className={styles.contenedorDiets}>
                     
                         <div className={styles.primeras4Diets}>
