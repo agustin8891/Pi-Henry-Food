@@ -4,7 +4,9 @@
     background-repeat:no-repeat;
     background-position: center center;
     background-size: cover;
+    margin-top:-45px; 
     margin-bottom:-40px; 
+
 }
 
 
@@ -16,7 +18,7 @@
 
 
 } */
-
+/* 
 @media(max-width:990px){
   .containerText{
     background-color:red ;
@@ -24,20 +26,283 @@
   .principal{
     height:100%
   }
+
+  .henryFoodText{
+    color: #ffac46; 
+    font-size:65px;
+    margin-top:30px;
+    margin-left:100px;
+  }
+  
+  .containerButton{
+      margin-top:20px;
+      margin-left:120px;
+    
+  }
+  
+  .textoP{
+    color: white; 
+    font-size:30px;
+    margin-top:0px;
+    margin-left:120px;
+  }
+  
+  
+  
+  .containerText{
+    background-color:#2a2a2a;
+    width: 615px;
+    height: 515px;
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    
+  }
+  
+  
+  .boton{
+
+      width: 165px;
+      height: 65px;
+      cursor: pointer;
+      background-color: #ffac46;    
+      position:relative;
+      display:inline-block;
+      padding:0px;
+      border-color: #2a2a2a;
+    border-radius: 15px;
+  font-family:ericma;
+    color: #2a2a2a;
+    font-size: 27px;
+    text-decoration: none;
+    font-weight: bold;
+    border-style: solid;
+     }
+  
+  .boton:hover{
+     background-color: #AA3939;    
+      
+  }   
+  
+  
 }
 
 @media(min-width:991px){
-  .containerText{
-    background-color:yellow ;
-    margin-top: 205px;
-    margin-left:195px;
-  }
+
+            .henryFoodText{
+              color: #ffac46; 
+              font-size:65px;
+              margin-top:30px;
+              margin-left:100px;
+            }
+            
+            .containerButton{
+                margin-top:20px;
+                margin-left:120px;
+              
+            }
+            
+            .textoP{
+              color: white; 
+              font-size:30px;
+              margin-top:0px;
+              margin-left:120px;
+            }
+            
+            
+            
+            .containerText{
+              background-color:#2a2a2a;
+              width: 615px;
+              height: 515px;
+              position:absolute;
+              display:flex;
+              flex-direction:column;
+              align-items:flex-start;
+              
+            }
+            
+            
+            .boton{
+            
+                width: 165px;
+                height: 65px;
+                cursor: pointer;
+                background-color: #ffac46;    
+                position:relative;
+                display:inline-block;
+                padding:0px;
+                border-color: #2a2a2a;
+              border-radius: 15px;
+            font-family:ericma;
+              color: #2a2a2a;
+              font-size: 27px;
+              text-decoration: none;
+              font-weight: bold;
+              border-style: solid;
+              }
+            
+            .boton:hover{
+              background-color: #AA3939;    
+      
+  }   
+  
+  
+  
+  
+     
+  
+} */
+
+@media(max-width:991px){
   .principal{
-    height: 935px;
+    height:700px;
+    width:375px;
   }
+    
+  .henryFoodText{
+    color: #ffac46; 
+    font-size:40px;
+/*                                                                             margin-top:30px; */
+    margin:auto;
+    padding:0px;
+    margin-bottom: px;
+
+  }
+  .containertextosP{
+    margin-top:0px;
+  }
+
+  .containerButton{
+/*                                                                             margin-top:20px; */
+      margin-left:120px;
+    
+  }
+
+  .textoP{
+    color: white; 
+    font-size:30px;
+    margin-top:0px;
+    margin-left:20px;
+  }
+
+
+
+
+
+  .containerText{
+    background-color:#2a2a2a;
+    width: 375px;
+    height: 500px;
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    margin-top:0px;
+    margin-left:0px;
+    
+  }
+
+
+  .boton{
+
+      width: 165px;
+      height: 65px;
+      cursor: pointer;
+      background-color: #ffac46;    
+      position:relative;
+      display:inline-block;
+      padding:0px;
+      border-color: #2a2a2a;
+    border-radius: 15px;
+  font-family:ericma;
+    color: #2a2a2a;
+    font-size: 27px;
+    text-decoration: none;
+    font-weight: bold;
+    border-style: solid;
+    }
+
+  .boton:hover{
+    background-color: #AA3939;    
+      
+  }   
 }
 
+@media(min-width:1500px){
+                                                                        .principal{
+                                                                          height:980px;
+                                                                        }
+                                                                          
+                                                                        .henryFoodText{
+                                                                          color: #ffac46; 
+                                                                          font-size:65px;
+/*                                                                           margin-top:30px; */
+                                                                          margin-left:100px;
+                                                                        }
 
+                                                                        .containerButton{
+/*                                                                             margin-top:20px; */
+                                                                            margin-left:120px;
+                                                                          
+                                                                        }
+
+                                                                        .textoP{
+                                                                          color: white; 
+                                                                          font-size:30px;
+                                                                          margin-top:0px;
+                                                                          margin-left:120px;
+                                                                        }
+
+
+
+                                                                        .containerText{
+                                                                          background-color:#2a2a2a;
+                                                                          width: 615px;
+                                                                          height: 515px;
+                                                                          position:absolute;
+                                                                          display:flex;
+                                                                          flex-direction:column;
+                                                                          align-items:flex-start;
+                                                                          margin-top:300px;
+                                                                          margin-left:200px;
+                                                                          
+                                                                        }
+
+
+                                                                        .boton{
+
+                                                                            width: 165px;
+                                                                            height: 65px;
+                                                                            cursor: pointer;
+                                                                            background-color: #ffac46;    
+                                                                            position:relative;
+                                                                            display:inline-block;
+                                                                            padding:0px;
+                                                                            border-color: #2a2a2a;
+                                                                          border-radius: 15px;
+                                                                        font-family:ericma;
+                                                                          color: #2a2a2a;
+                                                                          font-size: 27px;
+                                                                          text-decoration: none;
+                                                                          font-weight: bold;
+                                                                          border-style: solid;
+                                                                          }
+
+                                                                        .boton:hover{
+                                                                          background-color: #AA3939;    
+                                                                            
+                                                                        }   
+
+
+
+
+   
+
+}
+
+/* 
 .henryFoodText{
   color: #ffac46; 
   font-size:65px;
@@ -73,8 +338,7 @@
 
 
 .boton{
-    /* margin-top: 530px; */
-/*     margin-left:-1200px; */
+
     width: 165px;
     height: 65px;
     cursor: pointer;
@@ -101,3 +365,4 @@ font-family:ericma;
 
 
    
+ */

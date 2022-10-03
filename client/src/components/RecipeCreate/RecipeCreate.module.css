@@ -10,10 +10,11 @@ body{
             {
             display:flex;
             flex-direction:column;
-            margin-left:0px;
+            margin:auto;
             background-color:#eeeeee;
             margin-bottom:335px;
             margin:center;
+            width:300px;
 
             }
 
@@ -67,7 +68,7 @@ body{
 
 
             .estiloInput{
-            width:300px;
+            width:250px;
             margin:0px;
             height:23px;
             font-family:ericma;
@@ -228,15 +229,14 @@ body{
             .Contenedor{
             display:block;
 /*             background-color:red; */
-            width:500px;
+            width:100%;
             }
 
 
             .contenedorDiets{
             display:flex;
             justify-content:space-around;
-            margin-left:67px;
-            margin-right:201px;
+
             }
             .primeras4Diets{
             display:flex;
