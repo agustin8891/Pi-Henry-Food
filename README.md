@@ -50,8 +50,8 @@ DB_HOST=localhost
 
 Reemplazar `usuariodepostgres` y `passwordDePostgres` con sus propias credenciales para conectarse a postgres.
 
-3 - Crear desde postgreSQL una base de datos llamada `food;`, para esto se debe abrir la consola de postgresql y escribir la sentencia sql: 'CREATE DATABASE food;'
-Luego debemos ordenar a postgreSQL que se conecte a la base de datos creada anteriormente escribiendo la línea: '\c food' en la consola de postgres.
+3 - Crear desde postgreSQL una base de datos llamada `food`, para esto se debe abrir la consola de postgresql y escribir la sentencia sql: 'CREATE DATABASE food;'
+Luego debemos ordenar a postgreSQL que se conecte a la base de datos creada anteriormente escribiendo la línea: '\c food;' en la consola de postgres.
 
 Una vez conectada la base de datos en postgreSQL, se debe abrir el visual studio code y en la consola dentro de la carpeta 'api' escribir 'npm install', luego poner este mismo comando en la carpeta 'client'.
 
